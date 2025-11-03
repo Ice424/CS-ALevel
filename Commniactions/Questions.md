@@ -30,3 +30,9 @@ when transferring over long distance as skew is impossible and cross talk is min
 | **Parallel** | faster<br>simpler        | skew <br>crosstalk<br> |
 
 
+# Q4
+what is the difference between synchronous and asynchronous transmission 
+
+synchronous transmission needs to be on a common clock, it is a constant flow of data
+
+
