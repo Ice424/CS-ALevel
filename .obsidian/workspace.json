@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commniactions/Questions.md",
+                "file": "Obsidian/CS/Commniactions/Questions.md",
                 "mode": "source",
                 "source": false
               },
@@ -237,17 +237,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e3b8afe249aa011",
+  "active": "231b0f5ae98a44fc",
   "lastOpenFiles": [
+    "Untitled-1.ipynb",
+    "Obsidian/CS/Commniactions/How has communication evolved.md",
+    "Obsidian/CS/Commniactions/Questions.md",
     "Obsidian/Design/Genus of Design/Post WW.md",
     "Obsidian/Design/Genus of Design/MB-188 chair.md",
     "Obsidian/Design/Genus of Design/Designs for living.md",
     "Obsidian/Design/Genus of Design/Bouhaus.md",
     "Obsidian/Design/Genus of Design/American Design.md",
-    "Commniactions/How has communication evolved.md",
-    "Commniactions/Questions.md",
     "`",
-    "Commniactions",
+    "Obsidian/CS/Commniactions",
     "Paper1_ASLv1_Python3_Code/Paper1_ASLv1_Python3_Code.py",
     "Paper1_ASLv1_Python3_Code",
     "New folder/Paper1_ASLv1_Python3_Code.py",
@@ -275,7 +276,6 @@
     "README.md",
     "Design/Genus of Design/Designing for industry.md",
     "Design/Genus of Design/Designers.md",
-    "Design/Genus of Design/Abraham Darby.md",
     "Design/Designers/Untitled.canvas",
     "CS/Images/Pasted image 20250929145605.png"
   ]

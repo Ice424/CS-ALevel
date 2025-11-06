@@ -36,3 +36,24 @@ what is the difference between synchronous and asynchronous transmission
 synchronous transmission needs to be on a common clock, it is a constant flow of data
 
 
+# Q5
+the (r) is only synchronized at the start of transmission
+
+the start of information is signified by a start bit
+
+the clock is set ticking by the start bit 
+the cock is just set to a shared interval
+
+a stop bit is appended to the end to signify end of transmission
+
+# Q6
+baud rate sets the maximum frequency at witch the frequency my change 
+1 baud is 1 switch per second
+10 is 1 tenth of a second
+
+bit rate is measured as bit/second 
+
+with a low frequency signal the strength of the signal is not reduced over large distance
+a high frequency signal's strength is greatly reduced by distance
+
+band width is the range of frequency it can transmit from end of the communication link to the other without vb significant communication reduction
