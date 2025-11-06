@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/CS/Commniactions/Write Up.md",
+                "file": "Obsidian/CS/Information Theory/Claude Shannon.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Write Up"
+              "title": "Claude Shannon"
             }
           }
         ]
@@ -182,11 +182,12 @@
   },
   "active": "0721390ed629ae8e",
   "lastOpenFiles": [
+    "Obsidian/CS/Information Theory",
+    "Obsidian/CS/Commniactions/Write Up.md",
     "2025-11-06.md",
     "README.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "Obsidian/CS/Commniactions/Write Up.md",
     "code.exe",
     "example.zip",
     "SchoolSetup/test.py",
@@ -216,10 +217,10 @@
     "Obsidian/Design/Designers/Dieter Rams.md",
     "Obsidian/Design/Designers/Charles & Ray Eames.md",
     "Obsidian/CS/Images/Pasted image 20250929145605.png",
-    "Obsidian/CS/The Huffman code.md",
-    "Obsidian/CS/Information Theory.md",
-    "Obsidian/CS/Compression.md",
-    "Obsidian/CS/Claude Shannon.md",
+    "Obsidian/CS/Information Theory/The Huffman code.md",
+    "Obsidian/CS/Information Theory/Information Theory.md",
+    "Obsidian/CS/Information Theory/Compression.md",
+    "Obsidian/CS/Information Theory/Claude Shannon.md",
     "Design/Designers/Untitled.canvas",
     "CS/Images/Pasted image 20250929145605.png"
   ]
