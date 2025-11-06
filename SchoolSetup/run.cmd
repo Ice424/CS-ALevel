@@ -1,0 +1,1 @@
+C:/Users/20edunn/Documents/CS-ALevel/.venv/Scripts/python.exe c:/Users/20edunn/Documents/CS-ALevel/SchoolSetup/main2.py
