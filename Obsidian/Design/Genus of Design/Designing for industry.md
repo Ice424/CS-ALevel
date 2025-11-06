@@ -14,3 +14,11 @@ Design need to be reproducable but still high quality
 - unskilled workers
 - the same product
 
+- universally available 
+- universally affordable 
+
+Henry ford didn't invent the automobile he gave it to the most people 
+
+automotive design is still two halves the chassis (engineering) and the body ([[The artist]])
+
+12.5 man hours to 93 minutes for a single model t

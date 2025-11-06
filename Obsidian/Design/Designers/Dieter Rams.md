@@ -5,4 +5,4 @@
 - good design is honest
 - good design is as little design as possible
 
-[[#10 commandments of design]]
+[[Jony Ives' (No Longer So) Secret Design Weapon]]
