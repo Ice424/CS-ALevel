@@ -2,7 +2,7 @@ from manim import *
 class DefaultTemplate(Scene):
     def construct(self):
         circle = Circle()  # create a circle
-        circle.set_fill(PINK, opacity=0.5)  # set color and transparency
+        circle.set_fill(GREEN, opacity=0.5)  # set color and transparency
 
         square = Square()  # create a square
         square.flip(RIGHT)  # flip horizontally

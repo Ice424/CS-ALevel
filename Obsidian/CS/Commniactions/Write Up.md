@@ -4,6 +4,7 @@
 When looking at the example code I quickly realized that throughput of information would be an issue. Waiting 1 second for 0 and 2 for 1 would mean that transferring the text hello world would take 131 seconds or 2 mins and 11 seconds.
 
 The two solutions would be to either shorten the amount of time each pulse takes or change to a different system.
+$\frac{7}{8}$
 
 shortening the time taken for pulses sounds like a good idea however ideally you would want the difference in time between 1 and 0 to be as small as possible however with vex hardware it can be difficult to detect small differences in timing. this gives us three values to fine tune: length of pulse for 0, time between pulses, length of pulse for 1
 
@@ -11,7 +12,7 @@ Due to the amount of fine tuning getting this to run fast would require i decide
 
 ## The new protocol
 
-In the original program there is a synchronisation step at the start of each file. for the original setup it is not actually needed and the receiver will respond anytime it receives a two or 1 second pulse of light. I decided to use this synchronisation to start a clock on both brains with a preset rate 
+In the original program there is a synchronization step at the start of each file. for the original setup it is not actually needed and the receiver will respond anytime it receives a two or 1 second pulse of light. I decided to use this synchronization to start a clock on both brains with a preset rate 
 
 Every clock cycle the light would change to the next bit on for 1 off for 0. The receiver would then read the values in and display the output. 
 
