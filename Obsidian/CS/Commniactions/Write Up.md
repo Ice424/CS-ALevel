@@ -1,7 +1,7 @@
 
 ## The Initial Problem
 
-When looking at the example code I quickly realised that throughput of information would be an issue. Waiting 1 second for 0 and 2 for 1 would mean that transferring the text hello world would take 131 seconds or mins and 11 seconds.
+When looking at the example code I quickly realized that throughput of information would be an issue. Waiting 1 second for 0 and 2 for 1 would mean that transferring the text hello world would take 131 seconds or 2 mins and 11 seconds.
 
 The two solutions would be to either shorten the amount of time each pulse takes or change to a different system.
 
@@ -168,7 +168,7 @@ due to the changing midpoint the program was able to send the text "hello there 
 
 this program could be further improved with parity bits or other forms of error detection as that is currently absent and could be used in conditions with a lot of interference from other light sources 
 
-## full files
+## Full files
 ```python title:SenderFull
 import math
 from vex import *

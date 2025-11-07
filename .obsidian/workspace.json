@@ -25,14 +25,14 @@
             "id": "bd5f17b89a6736a2",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/plugins/obsidian-git/main.js",
-                "bFile": ".obsidian/plugins/obsidian-git/main.js",
-                "aRef": ""
+                "file": "Obsidian/CS/Commniactions/Write Up.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: main.js"
+              "icon": "lucide-file",
+              "title": "Write Up"
             }
           },
           {
@@ -225,6 +225,8 @@
   },
   "active": "bd5f17b89a6736a2",
   "lastOpenFiles": [
+    "Obsidian/CS/Commniactions/Questions.md",
+    "Obsidian/CS/Commniactions/How has communication evolved.md",
     "Obsidian/CS/Commniactions/Write Up.md",
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/partial_movie_file_list.txt",
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/4140469606_3901458704_223132457.mp4",
@@ -246,8 +248,6 @@
     "Obsidian/CS/Information Theory/Information Theory.md",
     "Obsidian/CS/Information Theory/Compression.md",
     "Obsidian/CS/Information Theory/Claude Shannon.md",
-    "Obsidian/CS/Commniactions/Questions.md",
-    "Obsidian/CS/Commniactions/How has communication evolved.md",
     "Commniactions/How has communication evolved.md",
     "Commniactions/Questions.md",
     "Design/Designers/Margaret Calvert.md",

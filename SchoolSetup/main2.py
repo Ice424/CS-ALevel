@@ -66,6 +66,7 @@ class EmailInput(Screen):
 
 class GitTime(Screen):
     
+    
 
 class SchoolSetup(App):
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]

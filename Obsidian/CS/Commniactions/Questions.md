@@ -56,4 +56,24 @@ bit rate is measured as bit/second
 with a low frequency signal the strength of the signal is not reduced over large distance
 a high frequency signal's strength is greatly reduced by distance
 
-band width is the range of frequency it can transmit from end of the communication link to the other without vb significant communication reduction
+band width is the range of frequency it can transmit from end of the communication link to the other without significant communication reduction
+
+Bandwidth is a measure of how fast data may be transmitted over the medium
+
+Attenuation is the strength of the received signal
+
+a low signal strength has a high attenuation
+
+## Q7
+
+there is a direct relationship between bitrate and bandwidth
+
+
+greater the bandwidth the higher the bit rate can be transmitted
+
+## Q8
+
+Latency is the time between sending a signal and receiving a signal back
+
+
+a protocol is a pre-agreed way of transferring data and certain signals or codes to do actions. the signal is sent between two computers or a computer to a peripheral
