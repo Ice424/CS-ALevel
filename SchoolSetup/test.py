@@ -1,23 +1,37 @@
-from textual.app import App, ComposeResult
-from textual.widgets import ProgressBar, Static
-from textual.containers import Vertical
 import requests
 import os
-import threading
-import tqdm
 
-def download(name, url):
-    response = requests.get(url, stream=True)
+from textual import work
+from textual.app import App, ComposeResult
+from textual.containers import VerticalScroll
+from textual.widgets import Button, Static, ProgressBar
+from textual.screen import Screen
+from textual.worker import Worker, get_current_worker
 
-    # Sizes in bytes.
-    total_size = int(response.headers.get("content-length", 0))
-    block_size = 1024
+class AnotherScreen(Screen):
+    def __init__(self, main, name: str | None = None, id: str | None = None, classes: str | None = None) -> None:
+        super().__init__(name, id, classes)
+        self.main = main
+        
+    def compose(self) -> ComposeResult:
+        yield Static("1 Download Done")
+        with VerticalScroll(id="weather-container"):
+            yield ProgressBar(id="Bar1")
+            yield ProgressBar(id="Bar2")
 
-    with tqdm(total=total_size, unit="B", unit_scale=True) as progress_bar:
-        with open(os.path.join(PATH, name), "wb") as file:
-            for data in response.iter_content(block_size):
-                progress_bar.update(len(data))
-                file.write(data)
+class DownloadApp(App):
+    def compose(self) -> ComposeResult:
+        self.downloads_complete = 0
+        yield Button()
+        with VerticalScroll(id="weather-container"):
+            yield ProgressBar(id="Bar1")
+            yield ProgressBar(id="Bar2")
 
-    if total_size != 0 and progress_bar.n != total_size:
-        raise RuntimeError("Could not download file")
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        
+        
+
+
+if __name__ == "__main__":
+    app = DownloadApp()
+    app.run()

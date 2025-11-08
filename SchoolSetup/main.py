@@ -41,7 +41,7 @@ if not os.path.isfile(GIT_PATH):
     os.system(os.path.join(PATH, 'git.exe'), "/SILENT")
 
 if not os.path.isfile(CODE_PATH):
-    os.system(os.path.join(PATH, "code.exe"), "/SILENT")
+    os.system(os.path.join(PATH, "code.exe"), "/VERYSILENT")
 
 try:
     with open(os.path.join(PATH, "config.json"), "r") as f:
