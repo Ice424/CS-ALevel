@@ -1,0 +1,6 @@
+{
+    "Obsidian": {
+        "url": "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest",
+        "GH": true
+    }
+}
