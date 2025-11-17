@@ -1,4 +1,5 @@
 import requests
+from threading import Semaphore
 import os
 
 from textual import work
@@ -111,19 +112,17 @@ class GitTime(Screen):
     pass
 
 class OtherApps(Screen):
-    def __init__(self, app:App, name: str | None = None, id: str | None = None, classes: str | None = None) -> None:
-        super().__init__(name, id, classes)
-        self.app = app
     
     def compose(self) -> ComposeResult:
-        r = requests.get("url")
+        r = requests.get("https://raw.githubusercontent.com/Ice424/CS-ALevel/refs/heads/main/SchoolSetup/otherProgams.json")
+        self.data = r.json()
         yield Header()
         yield Label("What Other apps would you like")
-        scroll = VerticalScroll()
+        with VerticalScroll(id="CheckScroll"):
+            for program in self.data.keys():
+                yield Checkbox(program)
         
-        VerticalScroll(
-            for 
-        )
+        yield Button("Continue", variant="success", id="OtherAppsContinue")
         
         bar1 = ProgressBar(id="Bar1")
         bar1.update(total=1, progress=1)
@@ -136,6 +135,18 @@ class OtherApps(Screen):
         yield bar3
         yield Footer()
         
+        def on_button_pressed(self, event: Button.Pressed) -> None:
+            if event.button.id == "OtherAppsContinue":
+                
+                scroll = self.query_one("#CheckScroll", VerticalScroll)
+                checkboxes = scroll.query(Checkbox).results()
+                app = self.app()
+                for cb in checkboxes:
+                    if cb.value:
+                        url = self.data[cb.label]["url"]
+                        if self.data[cb.label]
+                        app.download()
+                        print(cb.value, cb.label)  #
 
 class SchoolSetup(App):
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
@@ -155,53 +166,56 @@ class SchoolSetup(App):
         yield bar2  
         yield bar3
     def on_mount(self) -> None:
-        self.downloaded_items =0
+        self.download_semaphore = Semaphore(3)
+        self.downloaded_items = 0
+        self.download_count = 0
         if not os.path.isfile(CODE_PATH):
              self.code_worker = self.Download("code.exe", "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user", self.app)
         if not os.path.isfile(GIT_PATH):
-            url = self.fetch_latest_release("https://api.github.com/repos/git-for-windows/git/releases/latest")
+            url = self.fetch_latest_release("https://api.github.com/repos/git-for-windows/git/releases/latest", ".exe")
             self.git_worker = self.Download("git.exe", url, self.app)
-        self.push_screen(OtherApps(self))
+        self.push_screen(OtherApps())
         
 
-    def fetch_latest_release(self, url) -> str:
+    def fetch_latest_release(self, url, identifier) -> str:
         r = requests.get(url)
         for asset in r.json()["assets"]:
-            if ".exe" in asset["browser_download_url"]:
+            if identifier in asset["browser_download_url"]:
                 return asset["browser_download_url"]
         return url
     
-    @work(exclusive=False, thread=True)
+    @work(exclusive=False, thread=True, )
     def Download(self, name:str, url:str, app:App) -> None:
-        PATH = "SchoolSetup"
-        global download_count
-        download_count += 1
-        progress_bar_name = "#Bar" + str(download_count%3)
-        progress_bar = app.query_one(progress_bar_name, ProgressBar)
-        worker = get_current_worker()
-        response = requests.get(url, stream=True)
+        with self.download_semaphore: 
+            PATH = "SchoolSetup"
+            self.download_count += 1
+            progress_bar_name = "#Bar" +  str(((self.download_count - 1) % 3) + 1)
+            progress_bar = app.query_one(progress_bar_name, ProgressBar)
+            worker = get_current_worker()
+            response = requests.get(url, stream=True)
 
-        # Sizes in bytes.
-        total_size = int(response.headers.get("content-length", 0))
-        block_size = 1024
-        progress = 0
-        app.call_from_thread(progress_bar.update, total=total_size)
-        
-        with open(os.path.join(PATH, name), "wb") as file:
-            for data in response.iter_content(block_size):
+            if not os.path.isfile(os.path.join(PATH, name)):
+                # Sizes in bytes.
+                total_size = int(response.headers.get("content-length", 0))
+                block_size = 1024
+                progress = 0
+                app.call_from_thread(progress_bar.update, total=total_size)
+
+                with open(os.path.join(PATH, name), "wb") as file:
+                    for data in response.iter_content(block_size):
+                        screen = app.screen
+                        progress = progress+len(data)
+                        if worker.is_cancelled:
+                            return
+                        progress_bar = screen.query_one(progress_bar_name, ProgressBar)
+                        app.call_from_thread(progress_bar.update, total=total_size, progress=progress)
+                        file.write(data)
+                self.call_from_thread(self.download_done)
                 screen = app.screen
-                progress = progress+len(data)
-                if worker.is_cancelled:
-                    return
                 progress_bar = screen.query_one(progress_bar_name, ProgressBar)
-                app.call_from_thread(progress_bar.update, total=total_size, progress=progress)
-                file.write(data)
-        self.call_from_thread(self.download_done)
-        screen = app.screen
-        progress_bar = screen.query_one(progress_bar_name, ProgressBar)
-        app.call_from_thread(progress_bar.update, total=None)
-        os.system(os.path.join(PATH, name)+ " /VERYSILENT")
-        app.call_from_thread(progress_bar.update, total=1, progress=1)
+            app.call_from_thread(progress_bar.update, total=None)
+            os.system(os.path.join(PATH, name)+ " /VERYSILENT")
+            app.call_from_thread(progress_bar.update, total=1, progress=1)
         
     def download_done(self):
         self.downloaded_items += 1

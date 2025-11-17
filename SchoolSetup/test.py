@@ -1,10 +1,10 @@
 import requests
 
 
-def fetch_latest_release(url) -> str:
+def fetch_latest_release(url, identifier) -> str:
     r = requests.get(url)
     for asset in r.json()["assets"]:
-        if ".exe" in asset["browser_download_url"]:
+        if identifier in asset["browser_download_url"]:
             return asset["browser_download_url"]
     return url
 
