@@ -5,7 +5,7 @@ import os
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import HorizontalGroup, VerticalGroup, VerticalScroll
-from textual.widgets import Button, Digits, Footer, Header, ProgressBar, Checkbox, Input, Label
+from textual.widgets import Button, Footer, Header, ProgressBar, Checkbox, Input, Label, LoadingIndicator
 from textual.screen import Screen
 from textual.worker import Worker, get_current_worker
 
@@ -18,6 +18,13 @@ CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\cod
 global download_count
 download_count = 0
 
+def fetch_latest_release(url, identifier) -> str:
+        r = requests.get(url)
+        for asset in r.json()["assets"]:
+            if identifier in asset["browser_download_url"]:
+                return asset["browser_download_url"]
+        return url
+    
 def get_stuff(username: str):
     r = requests.get(f"https://api.github.com/users/{username}/repos")
     repos = r.json()
@@ -54,18 +61,17 @@ class UsernameInput(Screen):
 class EmailCheck(Screen):
     def __init__(self, username: str, name: str | None = None, id: str | None = None, classes: str | None = None) -> None:
         super().__init__(name, id, classes)
-        self.username = username
-        self.email = ""
+        self.app.username = username
         try:
-            self.email, self.repos = get_stuff(self.username)
+            self.app.email, self.repos = get_stuff(self.app.username)
         except Exception:
             self.app.push_screen(EmailInput())
         
     def compose(self) -> ComposeResult:
         yield Header()
-        yield Label(f"Welcome, {self.username}!")
+        yield Label(f"Welcome, {self.app.username}!")
        
-        yield Label(f"is, {self.email} your email")
+        yield Label(f"is, {self.app.email} your email")
         yield HorizontalGroup(
             Button("Yes", variant="success", id="yesEmail"),
             Button("No", variant="error", id="noEmail")
@@ -84,11 +90,15 @@ class EmailCheck(Screen):
         yield Footer()
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "yesEmail":
-            pass
+            if self.app.git_worker.is_finished and self.app.code_worker.is_finished:
+                self.app.push_screen(GitTime())
+            else:
+                self.app.push_screen(WaitTime())
         elif event.button.id == "noEmail":
-            self.app.push_screen(EmailInput())
+            self.app.switch_screen(EmailInput())
             
 class EmailInput(Screen):
+    
     def compose(self) -> ComposeResult:
         yield Header()
         yield Label("Enter your Github Email:")
@@ -105,11 +115,48 @@ class EmailInput(Screen):
         yield bar3
         yield Footer()
     def on_input_submitted(self, event: Input.Submitted) -> None:
-        username = event.value.strip()
-        self.app.push_screen(EmailCheck(username))
+        email = event.value.strip()
+        self.app.email = email
+        if self.app.git_worker.is_finished and self.app.code_worker.is_finished:
+            self.app.push_screen(GitTime())
+        else:
+            self.app.push_screen(WaitTime())
 
+class WaitTime(Screen):
+    def compose(self) -> ComposeResult:
+        yield Header()
+        yield Label("Waiting for git & VsCode")
+        bar1 = ProgressBar(id="Bar1")
+        bar1.update(total=1, progress=1)
+        bar2 = ProgressBar(id="Bar2")
+        bar2.update(total=1, progress=1)
+        bar3 = ProgressBar(id="Bar3")
+        
+        yield bar1
+        yield bar2  
+
+        yield LoadingIndicator()
+        
+        
+        yield Footer()
+        
+        self.wait_for_download()
+        
+    @work(exclusive=False)
+    async def wait_for_download(self):
+        await self.app.workers.wait_for_complete([self.app.code_worker, self.app.git_worker])
+        self.app.switch_screen(GitTime())
 class GitTime(Screen):
-    pass
+    def compose(self) -> ComposeResult:
+        bar1 = ProgressBar(id="Bar1")
+        bar1.update(total=1, progress=1)
+        bar2 = ProgressBar(id="Bar2")
+        bar2.update(total=1, progress=1)
+        bar3 = ProgressBar(id="Bar3")
+        
+        yield bar1
+        yield bar2  
+        yield bar3
 
 class OtherApps(Screen):
     
@@ -135,18 +182,20 @@ class OtherApps(Screen):
         yield bar3
         yield Footer()
         
-        def on_button_pressed(self, event: Button.Pressed) -> None:
-            if event.button.id == "OtherAppsContinue":
-                
-                scroll = self.query_one("#CheckScroll", VerticalScroll)
-                checkboxes = scroll.query(Checkbox).results()
-                app = self.app()
-                for cb in checkboxes:
-                    if cb.value:
-                        url = self.data[cb.label]["url"]
-                        if self.data[cb.label]
-                        app.download()
-                        print(cb.value, cb.label)  #
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        if event.button.id == "OtherAppsContinue":
+            
+            scroll = self.query_one("#CheckScroll", VerticalScroll)
+            checkboxes = scroll.query(Checkbox).results()
+            app = self.app
+            for cb in checkboxes:
+                if cb.value:
+                    url = self.data[cb.label]["url"]
+                    if self.data[cb.label]["GH"]:
+                        url = fetch_latest_release(url, self.data[cb.label]["exe_identifier"])
+                    self.app.Download(str(cb.label) + ".exe",url, self.app)
+                    print(cb.value, cb.label)
+            self.app.push_screen(UsernameInput())
 
 class SchoolSetup(App):
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
@@ -169,20 +218,15 @@ class SchoolSetup(App):
         self.download_semaphore = Semaphore(3)
         self.downloaded_items = 0
         self.download_count = 0
+        self.username = ""
+        self.email = ""
         if not os.path.isfile(CODE_PATH):
              self.code_worker = self.Download("code.exe", "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user", self.app)
         if not os.path.isfile(GIT_PATH):
-            url = self.fetch_latest_release("https://api.github.com/repos/git-for-windows/git/releases/latest", ".exe")
+            url = fetch_latest_release("https://api.github.com/repos/git-for-windows/git/releases/latest", ".exe")
             self.git_worker = self.Download("git.exe", url, self.app)
         self.push_screen(OtherApps())
         
-
-    def fetch_latest_release(self, url, identifier) -> str:
-        r = requests.get(url)
-        for asset in r.json()["assets"]:
-            if identifier in asset["browser_download_url"]:
-                return asset["browser_download_url"]
-        return url
     
     @work(exclusive=False, thread=True, )
     def Download(self, name:str, url:str, app:App) -> None:
@@ -215,6 +259,7 @@ class SchoolSetup(App):
                 progress_bar = screen.query_one(progress_bar_name, ProgressBar)
             app.call_from_thread(progress_bar.update, total=None)
             os.system(os.path.join(PATH, name)+ " /VERYSILENT")
+            os.system("taskkill /IM code /F")
             app.call_from_thread(progress_bar.update, total=1, progress=1)
         
     def download_done(self):

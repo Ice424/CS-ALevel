@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "39808830f87ac055",
+        "id": "6f8329588034c745",
         "type": "tabs",
         "children": [
           {
-            "id": "d7849fec7a6ce670",
+            "id": "8469f82c46904c34",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2025-11-13 10.07.17.excalidraw.md"
+                "file": "Key Wrods.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-11-13 10.07.17.excalidraw"
+              "icon": "lucide-file",
+              "title": "Key Wrods"
             }
           }
         ]
@@ -76,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "cf3da7462f309c36",
@@ -164,8 +165,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 248.5,
-    "collapsed": true
+    "width": 248.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,8 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d7849fec7a6ce670",
+  "active": "8469f82c46904c34",
   "lastOpenFiles": [
+    "Key Wrods.md",
+    "Obsidian/Design/CAD",
     "Excalidraw/Drawing 2025-11-13 10.07.17.excalidraw.md",
     "Obsidian/CS/Commniactions/Write Up.md",
     "Excalidraw",
@@ -195,7 +197,6 @@
     "Obsidian/CS/Commniactions/How has communication evolved.md",
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/partial_movie_file_list.txt",
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/4140469606_3901458704_223132457.mp4",
-    "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/355205087_3900508965_557880437.mp4",
     "Obsidian/Design/Genus of Design/Post WW.md",
     "Obsidian/Design/Genus of Design/MB-188 chair.md",
     "Obsidian/Design/Genus of Design/Designs for living.md",
@@ -217,7 +218,6 @@
     "Obsidian/Design/Designers/Marianne Brandt.md",
     "Obsidian/Design/Designers/Margaret Calvert.md",
     "Obsidian/Design/Designers/James Dyson.md",
-    "Obsidian/Design/Designers/Dieter Rams.md",
     "Obsidian/CS/Images/Pasted image 20250929145605.png",
     "Design/Designers/Untitled.canvas",
     "CS/Images/Pasted image 20250929145605.png"
