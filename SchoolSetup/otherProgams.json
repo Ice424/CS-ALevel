@@ -1,20 +1,17 @@
 {
-    "Obsidian": {
+    "Obsidian.exe": {
         "url": "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest",
         "GH": true,
-        "exe_identifier": ".exe",
-        "extention": "exe"
+        "exe_identifier": ".exe"
     },
-    "Prism Launcher": {
+    "Prism_Launcher.exe": {
         "url": "https://api.github.com/repos/PrismLauncher/PrismLauncher/releases/latest",
         "GH": true,
-        "exe_identifier": "Windows-MSVC-Setup",
-        "extention": "exe"
+        "exe_identifier": "Windows-MSVC-Setup"
     },
-    "JDK": {
+    "JDK.msi": {
         "url": "https://api.github.com/repos/adoptium/temurin21-binaries/releases/latest",
         "GH": true,
-        "exe_identifier": "OpenJDK21U-jdk_x64_windows_hotspot",
-        "extention": "msi"
+        "exe_identifier": "OpenJDK21U-jdk_x64_windows_hotspot"
     }
 }
