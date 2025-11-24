@@ -1,0 +1,23 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "LaTeX",
+      "format": "latex",
+      "command": "cite"
+    },
+    {
+      "name": "Harvard",
+      "format": "formatted-citation",
+      "cslStyle": "elsevier-harvard"
+    }
+  ],
+  "exportFormats": [],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note"
+}

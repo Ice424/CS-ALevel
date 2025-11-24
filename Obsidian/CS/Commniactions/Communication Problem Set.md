@@ -22,3 +22,4 @@
 8. 
 	1. if there are an even amount of bits in the 7 bit character a 1 is added to the beginning or end of the byte if its odd it'll add a 0. when the signal is received the program calculates weather the parity bit is correct if not we can assume something went wrong in transmission and request the byte again 
 	2. there is a direct relationship between bit rate and bandwidth. greater the bandwidth the higher the bit rate can be transmitted
+

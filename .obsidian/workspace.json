@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "6f8329588034c745",
+        "id": "41d62128b00265b6",
         "type": "tabs",
         "children": [
           {
-            "id": "8469f82c46904c34",
+            "id": "a7e9207931778b13",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "video",
               "state": {
-                "file": "Obsidian/CS/Commniactions/Communication Problem Set.md",
-                "mode": "source",
-                "source": false
+                "file": "light/media/videos/main/854p30/DefaultTemplate.mp4"
               },
               "icon": "lucide-file",
-              "title": "Communication Problem Set"
+              "title": "DefaultTemplate"
             }
           }
         ]
@@ -180,13 +178,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e3b8afe249aa011",
+  "active": "a7e9207931778b13",
   "lastOpenFiles": [
+    "light/media/videos/main/854p30/DefaultTemplate.mp4",
+    "appleDesignSpatialInput2023.md",
+    "Obsidian/CS/Commniactions/Communication Problem Set.md",
     "Obsidian/Design/Key Wrods.md",
     "Obsidian/CS/Commniactions/Questions.md",
     "Obsidian/CS/Commniactions/Write Up.md",
     "Obsidian/CS/Commniactions/How has communication evolved.md",
-    "Obsidian/CS/Commniactions/Communication Problem Set.md",
     "Obsidian/CS/Information Theory/Claude Shannon.md",
     "Key Wrods.md",
     "Obsidian/Design/CAD",
@@ -216,8 +216,6 @@
     "Obsidian/Design/Genus of Design/The artist.md",
     "Obsidian/Design/Genus of Design/Designing for industry.md",
     "Obsidian/Design/Genus of Design/Designers.md",
-    "Obsidian/Design/Designers/Philippe starck.md",
-    "Obsidian/Design/Designers/Marianne Brandt.md",
     "Obsidian/CS/Images/Pasted image 20250929145605.png",
     "Design/Designers/Untitled.canvas",
     "CS/Images/Pasted image 20250929145605.png"
