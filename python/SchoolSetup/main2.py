@@ -11,9 +11,13 @@ from textual.worker import Worker, get_current_worker
 
 PATH = "SchoolSetup"
 
-GIT_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Git\\cmd\\git.exe")
-
-CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
+if os.name == "posix":
+    GIT_PATH = os.path.abspath("/usr/bin/git")
+    CODE_PATH = os.path.abspath("/usr/bin/code")
+else:
+    print(os.environ['userdomain'])
+    GIT_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Git\\cmd\\git.exe")
+    CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
 
 global download_count
 download_count = 0
@@ -39,6 +43,7 @@ def get_stuff(username: str):
     return email, repos
     
 class UsernameInput(Screen):
+    app:"SchoolSetup"
     def compose(self) -> ComposeResult:
         yield Header()
         yield Label("Enter your Github Username:")
@@ -59,11 +64,12 @@ class UsernameInput(Screen):
         self.app.push_screen(EmailCheck(username))
 
 class EmailCheck(Screen):
+    app:"SchoolSetup"
     def __init__(self, username: str, name: str | None = None, id: str | None = None, classes: str | None = None) -> None:
         super().__init__(name, id, classes)
         self.app.username = username
         try:
-            self.app.email, self.repos = get_stuff(self.app.username)
+            self.app.email, app.repos = get_stuff(self.app.username)
         except Exception:
             self.app.push_screen(EmailInput())
         
@@ -90,7 +96,7 @@ class EmailCheck(Screen):
         yield Footer()
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "yesEmail":
-            if self.app.git_worker.is_finished and self.app.code_worker.is_finished:
+            if (os.path.isfile(GIT_PATH) and os.path.isfile(CODE_PATH)) or (self.app.git_worker.is_finished and self.app.code_worker.is_finished):
                 self.app.push_screen(GitTime())
             else:
                 self.app.push_screen(WaitTime())
@@ -98,7 +104,7 @@ class EmailCheck(Screen):
             self.app.switch_screen(EmailInput())
             
 class EmailInput(Screen):
-    
+    app:"SchoolSetup"
     def compose(self) -> ComposeResult:
         yield Header()
         yield Label("Enter your Github Email:")
@@ -117,12 +123,14 @@ class EmailInput(Screen):
     def on_input_submitted(self, event: Input.Submitted) -> None:
         email = event.value.strip()
         self.app.email = email
+        _, app.repos = get_stuff(self.app.username)
         if self.app.git_worker.is_finished and self.app.code_worker.is_finished:
             self.app.push_screen(GitTime())
         else:
             self.app.push_screen(WaitTime())
 
 class WaitTime(Screen):
+    app:"SchoolSetup"
     def compose(self) -> ComposeResult:
         yield Header()
         yield Label("Waiting for git & VsCode")
@@ -131,10 +139,11 @@ class WaitTime(Screen):
         bar2 = ProgressBar(id="Bar2")
         bar2.update(total=1, progress=1)
         bar3 = ProgressBar(id="Bar3")
+        bar3.update(total=1, progress=1)
         
         yield bar1
         yield bar2  
-
+        yield bar3
         yield LoadingIndicator()
         
         
@@ -147,7 +156,18 @@ class WaitTime(Screen):
         await self.app.workers.wait_for_complete([self.app.code_worker, self.app.git_worker])
         self.app.switch_screen(GitTime())
 class GitTime(Screen):
+    app:"SchoolSetup"
     def compose(self) -> ComposeResult:
+        yield Header()
+        repo_id = 0
+        with VerticalScroll(id="RepoScroll"):
+            for repo in self.app.repos:
+                
+                yield Checkbox(repo["name"] ,id=f"repo_{repo_id}")
+                repo_id += 1
+
+        yield Button("Continue", variant="success", id="RepoContinue")
+        yield Button("Skip", variant="error", id="RepoSkip")
         bar1 = ProgressBar(id="Bar1")
         bar1.update(total=1, progress=1)
         bar2 = ProgressBar(id="Bar2")
@@ -157,11 +177,28 @@ class GitTime(Screen):
         yield bar1
         yield bar2  
         yield bar3
-
-class OtherApps(Screen):
+        
+        
+    def on_mount(self) -> None:
+        os.system(f'"{GIT_PATH}" config --global user.name "{self.app.username}"')
+        os.system(f'"{GIT_PATH}" config --global user.email "{self.app.email}"')
     
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        if event.button.id == "RepoContinue":
+            scroll = self.query_one("#RepoScroll", VerticalScroll)
+            checkboxes = scroll.query(Checkbox).results()
+            for cb in checkboxes:
+                if cb.value:
+                    repo = self.app.repos[int(cb.id[-1])]
+                
+                    os.system(f'"{GIT_PATH}" clone {repo["html_url"]} "{os.path.expanduser("~/Documents/") }{repo["name"]}"')
+                    
+        self.app.push_screen(FinalScreen())
+                
+class OtherApps(Screen):
+    app:"SchoolSetup"
     def compose(self) -> ComposeResult:
-        r = requests.get("https://raw.githubusercontent.com/Ice424/CS-ALevel/refs/heads/main/SchoolSetup/otherProgams.json")
+        r = requests.get("https://raw.githubusercontent.com/Ice424/CS-ALevel/refs/heads/main/python/SchoolSetup/otherProgams.json")
         self.data = r.json()
         yield Header()
         yield Label("What Other apps would you like")
@@ -187,7 +224,6 @@ class OtherApps(Screen):
             
             scroll = self.query_one("#CheckScroll", VerticalScroll)
             checkboxes = scroll.query(Checkbox).results()
-            app = self.app
             for cb in checkboxes:
                 if cb.value:
                     url = self.data[cb.label]["url"]
@@ -199,6 +235,8 @@ class OtherApps(Screen):
 
 class SchoolSetup(App):
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
+    repos: list = []
+    setup_completed = False
     def action_toggle_dark(self) -> None:
         """An action to toggle dark mode."""
         self.theme = (
@@ -220,6 +258,10 @@ class SchoolSetup(App):
         self.download_count = 0
         self.username = ""
         self.email = ""
+        try:
+            os.mkdir(PATH)
+        except FileExistsError:
+            pass
         if not os.path.isfile(CODE_PATH):
              self.code_worker = self.Download("code.exe", "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user", self.app)
         if not os.path.isfile(GIT_PATH):
@@ -265,9 +307,35 @@ class SchoolSetup(App):
     def download_done(self):
         self.downloaded_items += 1
         
+        if self.downloaded_items == self.download_count and self.setup_completed:
+            app.exit()
+        
+class FinalScreen(Screen):
+    app:"SchoolSetup"
+    def compose(self) -> ComposeResult:
+        yield Header()
+        yield Label("Waiting for other downloads to finish")
+        bar1 = ProgressBar(id="Bar1")
+        bar1.update(total=1, progress=1)
+        bar2 = ProgressBar(id="Bar2")
+        bar2.update(total=1, progress=1)
+        bar3 = ProgressBar(id="Bar3")
+        bar3.update(total=1, progress=1)
+        
+        yield bar1
+        yield bar2  
+        yield bar3
+        yield LoadingIndicator()
         
         
-
+        yield Footer()
+        
+        app.setup_completed = True
+        
+        if app.downloaded_items == app.download_count:
+            app.exit()
+    
+        
 
 if __name__ == "__main__":
     app = SchoolSetup()
