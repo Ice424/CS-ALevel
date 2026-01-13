@@ -33,4 +33,4 @@ plasma cutter - can cut : metals
 
 water jet cutter - can cut: rock, metal, concrete, glass etc
 
-types of [[Maunfacturing]]
+types of [[Manufacturing]]

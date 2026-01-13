@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Key Words.md",
+                "file": "Obsidian/Design/Manufacturing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Key Words"
+              "title": "Manufacturing"
             }
           },
           {
@@ -37,16 +37,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/CS/business tour.md",
+                "file": "Obsidian/Design/Manufacturing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "business tour"
+              "title": "Manufacturing"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -190,8 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 248.5,
-    "collapsed": true
+    "width": 248.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,12 +205,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e3b8afe249aa011",
+  "active": "f47682d454af4d86",
   "lastOpenFiles": [
-    "Obsidian/Design/Scales of production.md",
-    "Obsidian/CS/business tour.md",
-    "Obsidian/Design/Maunfacturing.md",
     "Obsidian/Design/Key Words.md",
+    "Obsidian/Design/Manufacturing.md",
+    "Obsidian/CS/business tour.md",
+    "Obsidian/Design/Scales of production.md",
     "light/media/videos/main/854p30/DefaultTemplate.mp4",
     "appleDesignSpatialInput2023.md",
     "Obsidian/CS/Commniactions/Communication Problem Set.md",
@@ -228,7 +227,6 @@
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/partial_movie_file_list.txt",
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/4140469606_3901458704_223132457.mp4",
     "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/355205087_3900508965_557880437.mp4",
-    "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/355205087_4132448990_557880437.mp4",
     "Obsidian/Design/Genus of Design/Post WW.md",
     "Obsidian/Design/Genus of Design/MB-188 chair.md",
     "Obsidian/Design/Genus of Design/Designs for living.md",
@@ -245,9 +243,6 @@
     "Obsidian/Design/Genus of Design/The artist.md",
     "Obsidian/Design/Genus of Design/Designers.md",
     "Obsidian/Design/Designers/Philippe starck.md",
-    "Obsidian/Design/Designers/Marianne Brandt.md",
-    "Obsidian/Design/Designers/Margaret Calvert.md",
-    "Obsidian/Design/Designers/James Dyson.md",
     "Obsidian/CS/Images/Pasted image 20250929145605.png",
     "Design/Designers/Untitled.canvas",
     "CS/Images/Pasted image 20250929145605.png"
