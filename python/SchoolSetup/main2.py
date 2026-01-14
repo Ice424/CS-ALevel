@@ -15,9 +15,12 @@ if os.name == "posix":
     GIT_PATH = os.path.abspath("/usr/bin/git")
     CODE_PATH = os.path.abspath("/usr/bin/code")
 else:
-    print(os.environ['userdomain'])
-    GIT_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Git\\cmd\\git.exe")
-    CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
+    if os.environ['userdomain'] == "LANGTON":
+        GIT_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Git\\cmd\\git.exe")
+        CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
+    else:
+        GIT_PATH = os.path.abspath("C:\Program Files\Git\cmd\git.exe")
+        CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
 
 global download_count
 download_count = 0

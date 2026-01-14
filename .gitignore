@@ -2,3 +2,5 @@
 *.exe
 /.obsidian/workspace.json
 *.mp4
+*build*
+*dist*
