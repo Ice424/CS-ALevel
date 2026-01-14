@@ -1,6 +1,7 @@
 import requests
 from threading import Semaphore
 import os
+import subprocess
 
 from textual import work
 from textual.app import App, ComposeResult
@@ -11,19 +12,25 @@ from textual.worker import Worker, get_current_worker
 
 PATH = "SchoolSetup"
 
+
+
 if os.name == "posix":
     GIT_PATH = os.path.abspath("/usr/bin/git")
     CODE_PATH = os.path.abspath("/usr/bin/code")
 else:
     if os.environ['userdomain'] == "LANGTON":
-        GIT_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Git\\cmd\\git.exe")
-        CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
+        GIT_PATH = os.path.expanduser("~\\AppData\\Local\\Programs\\Git\\cmd\\git.exe")
+        CODE_PATH = os.path.expanduser("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
     else:
-        GIT_PATH = os.path.abspath("C:\Program Files\Git\cmd\git.exe")
-        CODE_PATH = os.path.abspath("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
+        GIT_PATH = os.path.expanduser("C:\Program Files\Git\cmd\git.exe")
+        CODE_PATH = os.path.expanduser("~\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe")
 
 global download_count
 download_count = 0
+
+def run(cmd):
+    completed = subprocess.run(["powershell", "-Command", cmd], capture_output=True)
+    return completed
 
 def fetch_latest_release(url, identifier) -> str:
         r = requests.get(url)
@@ -68,8 +75,8 @@ class UsernameInput(Screen):
 
 class EmailCheck(Screen):
     app:"SchoolSetup"
-    def __init__(self, username: str, name: str | None = None, id: str | None = None, classes: str | None = None) -> None:
-        super().__init__(name, id, classes)
+    def __init__(self, username: str) -> None:
+        super().__init__()
         self.app.username = username
         try:
             self.app.email, app.repos = get_stuff(self.app.username)
@@ -127,7 +134,7 @@ class EmailInput(Screen):
         email = event.value.strip()
         self.app.email = email
         _, app.repos = get_stuff(self.app.username)
-        if self.app.git_worker.is_finished and self.app.code_worker.is_finished:
+        if (os.path.isfile(GIT_PATH) and os.path.isfile(CODE_PATH)) or (self.app.git_worker.is_finished and self.app.code_worker.is_finished):
             self.app.push_screen(GitTime())
         else:
             self.app.push_screen(WaitTime())
@@ -183,8 +190,10 @@ class GitTime(Screen):
         
         
     def on_mount(self) -> None:
-        os.system(f'"{GIT_PATH}" config --global user.name "{self.app.username}"')
-        os.system(f'"{GIT_PATH}" config --global user.email "{self.app.email}"')
+        print(f'"{GIT_PATH}" config --global user.name "{self.app.username}"')
+        run("Set-ExecutionPolicy Bypass -Scope CurrentUser")
+        os.system(f'{GIT_PATH} config --global user.name "{self.app.username}"')
+        os.system(f'{GIT_PATH} config --global user.email "{self.app.email}"')
     
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "RepoContinue":
@@ -193,8 +202,8 @@ class GitTime(Screen):
             for cb in checkboxes:
                 if cb.value:
                     repo = self.app.repos[int(cb.id[-1])]
-                
-                    os.system(f'"{GIT_PATH}" clone {repo["html_url"]} "{os.path.expanduser("~/Documents/") }{repo["name"]}"')
+                    print(f'{GIT_PATH} clone {repo["html_url"]} "{os.path.expanduser("~/Documents/") }{repo["name"]}"')
+                    os.system(f'{GIT_PATH} clone {repo["html_url"]} "{os.path.expanduser("~/Documents/") }{repo["name"]}"')
                     
         self.app.push_screen(FinalScreen())
                 
@@ -289,14 +298,17 @@ class SchoolSetup(App):
                 block_size = 1024
                 progress = 0
                 app.call_from_thread(progress_bar.update, total=total_size)
+                screen = app.screen
 
                 with open(os.path.join(PATH, name), "wb") as file:
                     for data in response.iter_content(block_size):
-                        screen = app.screen
+                        if app.screen != screen:
+                            progress_bar = screen.query_one(progress_bar_name, ProgressBar)
+                            screen = app.screen
                         progress = progress+len(data)
                         if worker.is_cancelled:
                             return
-                        progress_bar = screen.query_one(progress_bar_name, ProgressBar)
+                       
                         app.call_from_thread(progress_bar.update, total=total_size, progress=progress)
                         file.write(data)
                 self.call_from_thread(self.download_done)
