@@ -23,12 +23,48 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Manufacturing.md",
+                "file": "Obsidian/Design/Types of Metals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Manufacturing"
+              "title": "Types of Metals"
+            }
+          },
+          {
+            "id": "f17e3dd5e68cc769",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
+          },
+          {
+            "id": "19f1881970df2ac4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Obsidian/Clippings/Untitled.png"
+              },
+              "icon": "lucide-image",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "f6ecf0dd8d6cb0aa",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Obsidian/Clippings/Untitled2.png"
+              },
+              "icon": "lucide-image",
+              "title": "Untitled2"
             }
           },
           {
@@ -46,7 +82,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -202,11 +238,17 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "2e3b8afe249aa011",
+  "active": "f17e3dd5e68cc769",
   "lastOpenFiles": [
+    "Obsidian/Clippings/Untitled2.png",
+    "Obsidian/Clippings/Untitled.png",
+    "input.png",
+    "Obsidian/Design/Types of Metals.md",
+    "Obsidian/Design/Manufacturing.md",
     "python/SchoolSetup/SchoolSetup/git.exe",
     "python/SchoolSetup/SchoolSetup/code.exe",
     "python/SchoolSetup/SchoolSetup",
@@ -223,16 +265,12 @@
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/frost_helmet.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/ice_pickaxe.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/frost_sword.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/frog_sword.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/frog_pickaxe.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/misc",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item",
     "SchoolSetup/ChillOriginsReasources/README.md",
     "SchoolSetup/ChillOriginsData/README.md",
     "Obsidian/Design/Key Words.md",
-    "Obsidian/Design/Manufacturing.md",
     "Obsidian/CS/business tour.md",
     "Obsidian/Design/Scales of production.md",
     "appleDesignSpatialInput2023.md",
@@ -252,7 +290,6 @@
     "Obsidian/CS/Information Theory/Compression.md",
     "Commniactions/How has communication evolved.md",
     "Commniactions/Questions.md",
-    "Design/Designers/Margaret Calvert.md",
     "Design/Designers/Untitled.canvas"
   ]
 }

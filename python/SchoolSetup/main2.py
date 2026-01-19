@@ -2,6 +2,7 @@ import requests
 from threading import Semaphore
 import os
 import subprocess
+import sys
 
 from textual import work
 from textual.app import App, ComposeResult
@@ -299,16 +300,18 @@ class SchoolSetup(App):
                 progress = 0
                 app.call_from_thread(progress_bar.update, total=total_size)
                 screen = app.screen
-
+                out_stream=sys.stdout
                 with open(os.path.join(PATH, name), "wb") as file:
                     for data in response.iter_content(block_size):
+                        
                         if app.screen != screen:
                             progress_bar = screen.query_one(progress_bar_name, ProgressBar)
+                            
                             screen = app.screen
                         progress = progress+len(data)
                         if worker.is_cancelled:
                             return
-                       
+                        print("Updating Bar", file=out_stream)
                         app.call_from_thread(progress_bar.update, total=total_size, progress=progress)
                         file.write(data)
                 self.call_from_thread(self.download_done)
