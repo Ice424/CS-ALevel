@@ -68,7 +68,7 @@ def when_started1():
     drivetrain.drive_for(FORWARD, 6.5, INCHES)
     global start_rot 
     distances = [123,78,40,30,18]
-    optimal_distance = 20
+    optimal_distance = 21
     vexcode_vision_11_objects = []
     list_widths = [0]
     drivetrain.turn_to_rotation(start_rot, velocity=10, wait=False)
@@ -124,17 +124,47 @@ def when_started1():
     drivetrain.drive_for(REVERSE, 15.5 + offset, INCHES)
 
     drivetrain.turn_to_rotation(0)
-    recorded_distance = distance_7.object_distance()
+    recorded_distance = distance_7.object_distance(INCHES)
+    
 
-    while distance_7.object_distance(INCHES) != optimal_distance:
-        brain.screen.set_cursor(1, 1)
-        brain.screen.clear_screen()
-        brain.screen.print(distance_7.object_distance(INCHES))
-        if distance_7.object_distance(INCHES) < optimal_distance:
-            drivetrain.drive(REVERSE)
+    distance_differance = recorded_distance - optimal_distance
+
+    brain.screen.clear_screen()
+    brain.screen.set_cursor(1, 1)
+    brain.screen.print(recorded_distance)
+    brain.screen.set_cursor(2, 1)
+    brain.screen.print(distance_differance)
+    while True:
+        drivetrain.drive_for(FORWARD, distance_differance, INCHES)
+
+        catupult_motor.spin_for(FORWARD, 5, TURNS)
+
+        drivetrain.drive_for(REVERSE, distance_differance, INCHES)
+
+        drivetrain.turn_to_rotation(start_rot)
+
+        drivetrain.drive_for(FORWARD, 18+ offset, INCHES)
+        sleep(1.2, SECONDS)
+        brain.screen.set_cursor(4, 1)
+        if optical_12.brightness() >= 50:
+            brain.screen.print("red")
+            target = "red"
+            offset = -3
         else:
-            drivetrain.drive(FORWARD)
-    drivetrain.stop()
+            brain.screen.print("green")
+            target = "green"
+            offset = 2
+
+        if start_rot < 0:
+            offset = -offset
+
+        drivetrain.drive_for(REVERSE, 15.5 + offset, INCHES)
+        drivetrain.turn_to_rotation(0)
+
+
+    
+
+
 
 
 brain.buttonLeft.released(start_left)
