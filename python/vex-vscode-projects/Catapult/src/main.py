@@ -68,10 +68,14 @@ def when_started1():
     drivetrain.drive_for(FORWARD, 6.5, INCHES)
     global start_rot 
     distances = [123,78,40,30,18]
-    optimal_distance = 21
+    optimal_distance = 25
     vexcode_vision_11_objects = []
     list_widths = [0]
     drivetrain.turn_to_rotation(start_rot, velocity=10, wait=False)
+
+    red_offset = -3
+    green_offset = 1
+
     while drivetrain.is_turning():
         vexcode_vision_11_objects = vision_11.take_snapshot(vision_11__SIG_1)
         brain.screen.clear_screen()
@@ -102,26 +106,26 @@ def when_started1():
     if start_rot > 0:
         drivetrain.drive_for(FORWARD, 4, INCHES)
     else:
-        pass
-        #drivetrain.drive_for(REVERSE, 2, INCHES)
+        drivetrain.drive_for(REVERSE, 2, INCHES)
     drivetrain.turn_to_rotation(start_rot)
 
     drivetrain.drive_for(FORWARD, 18, INCHES)
-    sleep(1.2, SECONDS)
+    drivetrain.drive_for(REVERSE, 1,INCHES)
+    sleep(0.6, SECONDS)
     brain.screen.set_cursor(4, 1)
     if optical_12.brightness() >= 50:
         brain.screen.print("red")
         target = "red"
-        offset = -3
+        offset = red_offset
     else:
         brain.screen.print("green")
         target = "green"
-        offset = 2
+        offset = green_offset
     
     if start_rot < 0:
         offset = -offset
     
-    drivetrain.drive_for(REVERSE, 15.5 + offset, INCHES)
+    drivetrain.drive_for(REVERSE, 14.5 + offset, INCHES)
 
     drivetrain.turn_to_rotation(0)
     recorded_distance = distance_7.object_distance(INCHES)
@@ -144,21 +148,22 @@ def when_started1():
         drivetrain.turn_to_rotation(start_rot)
 
         drivetrain.drive_for(FORWARD, 18+ offset, INCHES)
-        sleep(1.2, SECONDS)
+        drivetrain.drive_for(REVERSE, 1, INCHES)
+        sleep(0.6, SECONDS)
         brain.screen.set_cursor(4, 1)
         if optical_12.brightness() >= 50:
             brain.screen.print("red")
             target = "red"
-            offset = -3
+            offset = red_offset
         else:
             brain.screen.print("green")
             target = "green"
-            offset = 2
+            offset = green_offset
 
         if start_rot < 0:
             offset = -offset
 
-        drivetrain.drive_for(REVERSE, 15.5 + offset, INCHES)
+        drivetrain.drive_for(REVERSE, 14.5 + offset, INCHES)
         drivetrain.turn_to_rotation(0)
 
 
