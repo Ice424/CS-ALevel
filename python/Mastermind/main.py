@@ -24,6 +24,7 @@ answer = []
 for i in range(COLUMNS):
     answer.append(random.randint(0, len(COLOURS)-1))
 print(answer)
+guesses = 0
 
 class ball():
     def __init__(self, colour, x, y):
@@ -78,6 +79,9 @@ class pin():
 
 def submit_guess(row):
     guess = []
+    global running
+    global guesses
+    guesses += 1
     complete = True
     for i in range(COLUMNS):
         if board[row][i].state != "guess":
@@ -120,8 +124,22 @@ def submit_guess(row):
                 pins[-1].draw()
         pygame.display.flip()
         pygame.time.delay(5000)
-        global running
+
         running = False
+    if guesses == ROWS:
+        pygame.time.delay(5000)
+        for i in range(COLUMNS):
+            for j in range(ROWS):
+                board[j][i].colour = answer[i]
+                board[j][i].state = "revealed"
+                board[j][i].draw()
+                pins[-1].draw()
+        pygame.display.flip()
+        pygame.time.delay(5000)
+        
+        running = False
+
+
         
 
 board = []
