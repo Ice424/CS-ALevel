@@ -23,6 +23,8 @@ catupult_motor = Motor(Ports.PORT2, 1.0, False )
 
 distance_7 = Distance(Ports.PORT7)
 
+Led = Touchled(Ports.PORT4)
+
 # generating and setting random seed
 def initializeRandomSeed():
     wait(100, MSEC)
@@ -116,10 +118,14 @@ def when_started1():
     if optical_12.brightness() >= 50:
         brain.screen.print("red")
         target = "red"
+        Led.on()
+        Led.set_color(Color.RED)
         offset = red_offset
     else:
         brain.screen.print("green")
         target = "green"
+        Led.on()
+        Led.set_color(Color.GREEN)
         offset = green_offset
     
     if start_rot < 0:
@@ -154,10 +160,12 @@ def when_started1():
         if optical_12.brightness() >= 50:
             brain.screen.print("red")
             target = "red"
+            Led.set_color(Color.RED)
             offset = red_offset
         else:
             brain.screen.print("green")
             target = "green"
+            Led.set_color(Color.GREEN)
             offset = green_offset
 
         if start_rot < 0:
