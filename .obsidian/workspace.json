@@ -8,81 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a7e9207931778b13",
+            "id": "1026db607c50e251",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "f47682d454af4d86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Obsidian/Design/Types of Metals.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Obsidian/Design/Manufacturing.md",
+                "bFile": "Obsidian/Design/Manufacturing.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Types of Metals"
-            }
-          },
-          {
-            "id": "f17e3dd5e68cc769",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
-            }
-          },
-          {
-            "id": "19f1881970df2ac4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Obsidian/Clippings/Untitled.png"
-              },
-              "icon": "lucide-image",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "f6ecf0dd8d6cb0aa",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Obsidian/Clippings/Untitled2.png"
-              },
-              "icon": "lucide-image",
-              "title": "Untitled2"
-            }
-          },
-          {
-            "id": "6d44ee2b9a45252d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Manufacturing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Manufacturing"
+              "icon": "diff",
+              "title": "Diff: Manufacturing"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -242,24 +181,28 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "f17e3dd5e68cc769",
+  "active": "1026db607c50e251",
   "lastOpenFiles": [
-    "python/Mastermind/main.py",
-    "python/Mastermind/requirements.txt",
-    "python/Mastermind",
+    "Obsidian/Design/Key Words.md",
+    "Obsidian/Design/Manufacturing.md",
+    "Excalidraw/Drawing 2025-11-13 10.07.17.excalidraw.md",
     "Obsidian/Clippings/Untitled2.png",
     "Obsidian/Clippings/Untitled.png",
-    "input.png",
     "Obsidian/Design/Types of Metals.md",
-    "Obsidian/Design/Manufacturing.md",
+    "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
+    "Obsidian/Clippings/~$A DT 7552 Unit 9 Homework 1.docx",
+    "Obsidian/Clippings/AQA DT 7552 Unit 9 Homework 1 1.docx",
+    "Obsidian/Clippings/AQA DT 7552 Unit 9 Homework 1.docx",
+    "Obsidian/Design/Metal forming processes.md",
+    "python/vex-vscode-projects/Catapult/src/not main.py",
+    "python/Mastermind/requirements.txt",
+    "python/Mastermind/main.py",
+    "python/Mastermind",
+    "input.png",
     "python/SchoolSetup/SchoolSetup/git.exe",
     "python/SchoolSetup/SchoolSetup/code.exe",
     "python/SchoolSetup/SchoolSetup",
-    "SchoolSetup/WerewolfBot/roles.py",
-    "SchoolSetup/WerewolfBot/main.py",
     "SchoolSetup/WerewolfBot/README.md",
-    "SchoolSetup/WerewolfBot",
-    "SchoolSetup/ChillOriginsReasources/pack.mcmeta",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/traficconetexture.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/temperate_frog.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/rainbow_hat.png",
@@ -267,10 +210,8 @@
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/glass.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/frost_helmet.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/ice_pickaxe.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom",
     "SchoolSetup/ChillOriginsReasources/README.md",
     "SchoolSetup/ChillOriginsData/README.md",
-    "Obsidian/Design/Key Words.md",
     "Obsidian/CS/business tour.md",
     "Obsidian/Design/Scales of production.md",
     "appleDesignSpatialInput2023.md",
@@ -284,12 +225,10 @@
     "Obsidian/Design/Genus of Design/Designs for living.md",
     "Obsidian/Design/Genus of Design/Bouhaus.md",
     "Obsidian/Design/Genus of Design/American Design.md",
-    "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
     "Obsidian/CS/Information Theory/The Huffman code.md",
     "Obsidian/CS/Information Theory/Information Theory.md",
     "Obsidian/CS/Information Theory/Compression.md",
     "Commniactions/How has communication evolved.md",
-    "Commniactions/Questions.md",
     "Design/Designers/Untitled.canvas"
   ]
 }

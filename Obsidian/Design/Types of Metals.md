@@ -1,5 +1,5 @@
 
-Aluminum is made from baxuite
+Aluminum is made from bauxite
 ## Ferrous metals
 
 Low carbon steel
