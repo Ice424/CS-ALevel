@@ -22,6 +22,34 @@
             }
           },
           {
+            "id": "c8ad3c3851c2c900",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json"
+            }
+          },
+          {
+            "id": "90cbbb9c578c2632",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "conflict-files-obsidian-git.md",
+                "bFile": "conflict-files-obsidian-git.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: conflict-files-obsidian-git"
+            }
+          },
+          {
             "id": "8bf0230f498278fa",
             "type": "leaf",
             "state": {
@@ -35,7 +63,8 @@
               "title": "Diff: Untitled"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -195,9 +224,16 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "1c4a0d377c3307cd",
+  "active": "90cbbb9c578c2632",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Obsidian/Design/Plywood.md",
+    "python/OOP problem Set/Q6.py",
+    "python/OOP problem Set/Q4.py",
+    "python/OOP problem Set/Q2.py",
+    "python/OOP problem Set/Q1.py",
+    "python/OOP problem Set",
+    "Obsidian/Design/Metal forming processes.md",
     "Obsidian/CS/CS50P - Regex.md",
     "python/vex-vscode-projects/Catapult/src/not main.py",
     "Obsidian/Design/Manufacturing.md",
@@ -209,12 +245,7 @@
     "input.png",
     "Obsidian/Design/Types of Metals.md",
     "python/SchoolSetup/SchoolSetup/git.exe",
-    "python/SchoolSetup/SchoolSetup/code.exe",
-    "python/SchoolSetup/SchoolSetup",
-    "SchoolSetup/WerewolfBot/roles.py",
-    "SchoolSetup/WerewolfBot/main.py",
     "SchoolSetup/WerewolfBot/README.md",
-    "SchoolSetup/WerewolfBot",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/traficconetexture.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/temperate_frog.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/rainbow_hat.png",
@@ -241,8 +272,6 @@
     "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
     "Obsidian/CS/Information Theory/The Huffman code.md",
     "Obsidian/CS/Information Theory/Information Theory.md",
-    "Obsidian/CS/Information Theory/Compression.md",
-    "Commniactions/How has communication evolved.md",
     "Design/Designers/Untitled.canvas"
   ]
 }
