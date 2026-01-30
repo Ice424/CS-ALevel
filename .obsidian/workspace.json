@@ -4,85 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "41d62128b00265b6",
+        "id": "8c1482827333098c",
         "type": "tabs",
         "children": [
           {
-            "id": "a7e9207931778b13",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "f47682d454af4d86",
+            "id": "1c4a0d377c3307cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Types of Metals.md",
+                "file": "Obsidian/Design/Plywood.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Types of Metals"
+              "title": "Plywood"
             }
           },
           {
-            "id": "f17e3dd5e68cc769",
+            "id": "8bf0230f498278fa",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "split-diff-view",
               "state": {
-                "currentVersion": "1.11.4"
+                "aFile": "Obsidian/Design/Untitled.md",
+                "bFile": "Obsidian/Design/Untitled.md",
+                "aRef": ""
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
-            }
-          },
-          {
-            "id": "19f1881970df2ac4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Obsidian/Clippings/Untitled.png"
-              },
-              "icon": "lucide-image",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "f6ecf0dd8d6cb0aa",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Obsidian/Clippings/Untitled2.png"
-              },
-              "icon": "lucide-image",
-              "title": "Untitled2"
-            }
-          },
-          {
-            "id": "6d44ee2b9a45252d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Manufacturing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Manufacturing"
+              "icon": "diff",
+              "title": "Diff: Untitled"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -242,16 +195,19 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "f17e3dd5e68cc769",
+  "active": "1c4a0d377c3307cd",
   "lastOpenFiles": [
+    "Obsidian/Design/Plywood.md",
+    "Obsidian/CS/CS50P - Regex.md",
+    "python/vex-vscode-projects/Catapult/src/not main.py",
+    "Obsidian/Design/Manufacturing.md",
+    "Obsidian/Clippings/Untitled2.png",
+    "Obsidian/Clippings/Untitled.png",
     "python/Mastermind/main.py",
     "python/Mastermind/requirements.txt",
     "python/Mastermind",
-    "Obsidian/Clippings/Untitled2.png",
-    "Obsidian/Clippings/Untitled.png",
     "input.png",
     "Obsidian/Design/Types of Metals.md",
-    "Obsidian/Design/Manufacturing.md",
     "python/SchoolSetup/SchoolSetup/git.exe",
     "python/SchoolSetup/SchoolSetup/code.exe",
     "python/SchoolSetup/SchoolSetup",
@@ -259,7 +215,6 @@
     "SchoolSetup/WerewolfBot/main.py",
     "SchoolSetup/WerewolfBot/README.md",
     "SchoolSetup/WerewolfBot",
-    "SchoolSetup/ChillOriginsReasources/pack.mcmeta",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/traficconetexture.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/temperate_frog.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/rainbow_hat.png",
@@ -267,7 +222,6 @@
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/glass.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/frost_helmet.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/ice_pickaxe.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom",
     "SchoolSetup/ChillOriginsReasources/README.md",
     "SchoolSetup/ChillOriginsData/README.md",
     "Obsidian/Design/Key Words.md",
@@ -289,7 +243,6 @@
     "Obsidian/CS/Information Theory/Information Theory.md",
     "Obsidian/CS/Information Theory/Compression.md",
     "Commniactions/How has communication evolved.md",
-    "Commniactions/Questions.md",
     "Design/Designers/Untitled.canvas"
   ]
 }
