@@ -7,7 +7,6 @@ class Trigonometry():
     
     def triangle_area(self, base, height):
         area = base * height 
-        
         return area
     
 trig = Trigonometry()
