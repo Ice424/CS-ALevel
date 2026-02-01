@@ -1,0 +1,21 @@
+{
+    "Obsidian.exe": {
+        "url": "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest",
+        "GH": true,
+        "exe_identifier": ".exe"
+    },
+    "Prism_Launcher.exe": {
+        "url": "https://api.github.com/repos/PrismLauncher/PrismLauncher/releases/latest",
+        "GH": true,
+        "exe_identifier": "Windows-MSVC-Setup"
+    },
+    "JDK.msi": {
+        "url": "https://api.github.com/repos/adoptium/temurin21-binaries/releases/latest",
+        "GH": true,
+        "exe_identifier": "OpenJDK21U-jdk_x64_windows_hotspot"
+    },
+    "Firefox.exe": {
+        "url": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-GB",
+        "GH": false
+    }
+}

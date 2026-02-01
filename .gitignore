@@ -1,4 +1,6 @@
 */.venv
-*/*.exe
+*.exe
 /.obsidian/workspace.json
-*/*.mp4
+*.mp4
+*build*
+*dist*

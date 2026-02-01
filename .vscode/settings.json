@@ -1,3 +1,4 @@
 {
-    "figura.librariesFolderPath": "/home/ice424/.local/share/.minecraft/figura/avatars/libraries/"
+    "figura.librariesFolderPath": "/home/ice424/.local/share/.minecraft/figura/avatars/libraries/",
+    "python.REPL.enableREPLSmartSend": false
 }
