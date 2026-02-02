@@ -16,7 +16,7 @@ COLOURS = ["red", "green", "blue", "yellow", "orange", "purple"]
 
 PADDING = 20
 ROWS = 12
-COLUMNS = 5
+COLUMNS = 4
 
 BOARD_WIDTH, BOARD_HEIGHT = WIDTH-(WIDTH/ COLUMNS), HEIGHT
 
