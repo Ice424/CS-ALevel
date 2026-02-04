@@ -11,79 +11,13 @@
             "id": "1c4a0d377c3307cd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Plywood.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Plywood"
-            }
-          },
-          {
-            "id": "c8ad3c3851c2c900",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
-            }
-          },
-          {
-            "id": "90cbbb9c578c2632",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "conflict-files-obsidian-git.md",
-                "bFile": "conflict-files-obsidian-git.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: conflict-files-obsidian-git"
-            }
-          },
-          {
-            "id": "8bf0230f498278fa",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "file": "Obsidian/Design/Genus of Design/Post WW.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Post WW"
-            }
-          },
-          {
-            "id": "99055670b96e3287",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Genus of Design/Designing for war.md",
-                "mode": "source",
-                "source": false
-                "aFile": "Obsidian/Design/Untitled.md",
-                "bFile": "Obsidian/Design/Untitled.md",
-                "aRef": ""
-              },
-              "icon": "lucide-file",
-              "title": "Designing for war"
-              "icon": "diff",
-              "title": "Diff: Untitled"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,6 +155,16 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "815cd1714180646f",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
           }
         ],
         "currentTab": 4
@@ -243,45 +187,41 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "0721390ed629ae8e",
-  "active": "90cbbb9c578c2632",
+  "active": "2e3b8afe249aa011",
   "lastOpenFiles": [
-    "Obsidian/Design/Genus of Design/Post WW.md",
+    "python/OOP problem Set/Q9.py",
+    "python/OOP problem Set/Q8.py",
+    "python/OOP problem Set/Q6-7.py",
+    "python/OOP problem Set/Q4-5.py",
+    "python/OOP problem Set/Q10.py",
+    "output2.png",
+    "output1.png",
+    "output0.png",
+    "input.jpg",
     "Obsidian/Design/Genus of Design/Designing for war.md",
-    "Obsidian/Design/Scales of production.md",
-    "2025-12-31.md",
-    "Untitled.canvas",
-    "conflict-files-obsidian-git.md",
+    "input.png",
+    "Obsidian/CS/business tour.md",
+    "Obsidian/CS/CS50P - Regex.md",
     "Obsidian/Design/Plywood.md",
+    "conflict-files-obsidian-git.md",
     "python/OOP problem Set/Q6.py",
     "python/OOP problem Set/Q4.py",
     "python/OOP problem Set/Q2.py",
     "python/OOP problem Set/Q1.py",
     "python/OOP problem Set",
     "Obsidian/Design/Metal forming processes.md",
-    "Obsidian/CS/CS50P - Regex.md",
     "python/vex-vscode-projects/Catapult/src/not main.py",
     "Obsidian/Design/Manufacturing.md",
     "Obsidian/Clippings/Untitled2.png",
     "Obsidian/Clippings/Untitled.png",
-    "python/Mastermind/main.py",
-    "python/Mastermind/requirements.txt",
-    "python/Mastermind",
-    "input.png",
     "Obsidian/Design/Types of Metals.md",
-    "python/SchoolSetup/SchoolSetup/git.exe",
     "SchoolSetup/WerewolfBot/README.md",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/traficconetexture.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/temperate_frog.png",
     "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/rainbow_hat.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/lambonew.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/glass.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/frost_helmet.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/item/custom/ice_pickaxe.png",
     "SchoolSetup/ChillOriginsReasources/README.md",
     "SchoolSetup/ChillOriginsData/README.md",
     "Obsidian/Design/Key Words.md",
-    "Obsidian/CS/business tour.md",
     "Obsidian/Design/Scales of production.md",
     "appleDesignSpatialInput2023.md",
     "Obsidian/CS/Commniactions/Communication Problem Set.md",
@@ -289,18 +229,12 @@
     "Obsidian/CS/Commniactions/Write Up.md",
     "Obsidian/CS/Commniactions/Questions.md",
     "Obsidian/CS/Commniactions/How has communication evolved.md",
-    "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/partial_movie_file_list.txt",
-    "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/4140469606_3901458704_223132457.mp4",
-    "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/355205087_3900508965_557880437.mp4",
-    "light/media/videos/main/854p30/partial_movie_files/DefaultTemplate/355205087_4132448990_557880437.mp4",
     "Obsidian/Design/Genus of Design/Post WW.md",
     "Obsidian/Design/Genus of Design/MB-188 chair.md",
     "Obsidian/Design/Genus of Design/Designs for living.md",
     "Obsidian/Design/Genus of Design/Bouhaus.md",
     "Obsidian/Design/Genus of Design/American Design.md",
     "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
-    "Obsidian/CS/Information Theory/The Huffman code.md",
-    "Obsidian/CS/Information Theory/Information Theory.md",
     "Design/Designers/Untitled.canvas"
   ]
 }
