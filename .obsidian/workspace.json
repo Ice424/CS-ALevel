@@ -1,14 +1,38 @@
 {
   "main": {
-    "id": "371612d44b2f579f",
+    "id": "656b6aca51d4060f",
     "type": "split",
     "children": [
       {
-        "id": "8c1482827333098c",
+        "id": "1cdec4a0bcf38836",
         "type": "tabs",
         "children": [
           {
-            "id": "1c4a0d377c3307cd",
+            "id": "8d975954e4542757",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Obsidian/Clippings/TopView_crop.png"
+              },
+              "icon": "lucide-image",
+              "title": "TopView_crop"
+            }
+          },
+          {
+            "id": "c3f4593ffafc7846",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Obsidian/Clippings/TopView_crop.png"
+              },
+              "icon": "lucide-image",
+              "title": "TopView_crop"
+            }
+          },
+          {
+            "id": "51aa7418ef798b0a",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -16,36 +40,23 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
-          },
-          {
-            "id": "6944258bcc7e2939",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mermiad.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mermiad"
-            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "4db448ea59d80787",
+    "id": "7131ec43679121a6",
     "type": "split",
     "children": [
       {
-        "id": "f0b91f8d6039a660",
+        "id": "bdd35d5886fc4416",
         "type": "tabs",
         "children": [
           {
-            "id": "0721390ed629ae8e",
+            "id": "fbbddddf1d4afb8b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +69,7 @@
             }
           },
           {
-            "id": "cb8131dc5fbb1fdd",
+            "id": "2e02766262421ed5",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +86,7 @@
             }
           },
           {
-            "id": "6983df2d36e93a70",
+            "id": "e6c94f2d822dd28b",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -91,19 +102,20 @@
     "width": 300
   },
   "right": {
-    "id": "cf3da7462f309c36",
+    "id": "45ffa7e2e311959d",
     "type": "split",
     "children": [
       {
-        "id": "551cf8950d57bfcd",
+        "id": "05c9ae9550c2c6fd",
         "type": "tabs",
         "children": [
           {
-            "id": "487cd244b25fd88a",
+            "id": "a451777698fedd3c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Obsidian/CS/Catapult Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,25 +125,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Catapult Project"
             }
           },
           {
-            "id": "878cd40f61e3806c",
+            "id": "1963ae29a5b41076",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commniactions/Questions.md",
+                "file": "Obsidian/CS/Catapult Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Questions"
+              "title": "Outgoing links from Catapult Project"
             }
           },
           {
-            "id": "756826f973f942f5",
+            "id": "1ff62ac1db7d2032",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -146,22 +158,22 @@
             }
           },
           {
-            "id": "846407f6e71dc2fc",
+            "id": "a1540a47052e7eb3",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/Designers/Margaret Calvert.md",
+                "file": "Obsidian/CS/Catapult Project.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Margaret Calvert"
+              "title": "Outline of Catapult Project"
             }
           },
           {
-            "id": "2e3b8afe249aa011",
+            "id": "047743f341d29baa",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -171,7 +183,7 @@
             }
           },
           {
-            "id": "b379c28efde7ee35",
+            "id": "c32d9de584a9e134",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -185,7 +197,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 248.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,53 +213,27 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "1c4a0d377c3307cd",
+  "active": "51aa7418ef798b0a",
   "lastOpenFiles": [
     "Obsidian/CS/Catapult Project.md",
-    "Mermiad.md",
+    "catapult flow.md",
+    "Obsidian/Clippings/TopView_crop.png",
     "input.png",
+    "input.jpg",
+    "Obsidian/Design/Types of Metals.md",
+    "Obsidian/Design/Scales of production.md",
+    "Obsidian/Design/Metal forming processes.md",
+    "Obsidian/Design/Manufacturing.md",
+    "Obsidian/Design/Key Words.md",
+    "Obsidian/Design/Genus of Design/Post WW.md",
+    "Obsidian/CS/CS50P - Regex.md",
+    "Obsidian/CS/business tour.md",
+    "Mermiad.md",
     "python/Chess/requirements.txt",
     "python/Chess/main.py",
     "python/Chess",
-    "python/OOP problem Set/Q9.py",
-    "python/OOP problem Set/Q8.py",
-    "python/OOP problem Set/Q6-7.py",
-    "python/OOP problem Set/Q4-5.py",
-    "python/OOP problem Set/Q10.py",
     "output2.png",
     "output1.png",
-    "output0.png",
-    "input.jpg",
-    "Obsidian/Design/Genus of Design/Designing for war.md",
-    "Obsidian/CS/business tour.md",
-    "Obsidian/CS/CS50P - Regex.md",
-    "Obsidian/Design/Plywood.md",
-    "conflict-files-obsidian-git.md",
-    "python/OOP problem Set/Q6.py",
-    "python/OOP problem Set/Q4.py",
-    "Obsidian/Design/Metal forming processes.md",
-    "Obsidian/Design/Manufacturing.md",
-    "Obsidian/Clippings/Untitled2.png",
-    "Obsidian/Clippings/Untitled.png",
-    "Obsidian/Design/Types of Metals.md",
-    "SchoolSetup/WerewolfBot/README.md",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/traficconetexture.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/temperate_frog.png",
-    "SchoolSetup/ChillOriginsReasources/assets/minecraft/textures/block/custom/rainbow_hat.png",
-    "SchoolSetup/ChillOriginsReasources/README.md",
-    "SchoolSetup/ChillOriginsData/README.md",
-    "Obsidian/Design/Key Words.md",
-    "Obsidian/Design/Scales of production.md",
-    "appleDesignSpatialInput2023.md",
-    "Obsidian/CS/Commniactions/Communication Problem Set.md",
-    "Obsidian/CS/Commniactions/Questions.md",
-    "Obsidian/CS/Commniactions/Write Up.md",
-    "Obsidian/CS/Commniactions/Questions.md",
-    "Obsidian/CS/Commniactions/How has communication evolved.md",
-    "Obsidian/Design/Genus of Design/Post WW.md",
-    "Obsidian/Design/Genus of Design/MB-188 chair.md",
-    "Obsidian/Design/Genus of Design/Designs for living.md",
-    "Obsidian/Design/Genus of Design/Bouhaus.md",
-    "Design/Designers/Untitled.canvas"
+    "output0.png"
   ]
 }
