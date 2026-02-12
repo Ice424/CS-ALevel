@@ -1,14 +1,15 @@
 import pygame
 import os
+import argparse
+import socket
+import select
 from typing import Literal
 
 # pygame setup
 pygame.init()
 WIDTH = 1280
 HEIGHT = 720
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-clock = pygame.time.Clock()
-running = True
+
 
 GAME_FONT = pygame.font.SysFont(None, 24)
 GREEN = "#8fc294"
@@ -18,11 +19,11 @@ CREAM = "#fcfcf7"
 STARTING_BACK_RANK = ["R", "N", "B", "Q", "K", "B", "N", "R"]
 FILES = "ABCDEFGH"
 
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 
-promotion_piece: Piece | None = None
-promotion_side: str | None = None
-promotion_square: str | None = None
-promotion_options = ["Q", "R", "B", "N"]
+network_role: None | Literal["W", "B"] = None
+"""White is Host Black is client"""
+
 
 
 def index_from_notation(square:str):
@@ -34,6 +35,7 @@ def notation_from_index(file:int, rank:int):
     if 0 <= file < 8 and 0 <= rank < 8:
         return f"{FILES[file]}{rank + 1}"
     return None
+
 
 
 def ray_moves(piece, directions, board):
@@ -54,16 +56,15 @@ def ray_moves(piece, directions, board):
     return [m for m in moves if m]
 
 
-
-def rook_moves(piece:Piece, board:Board) -> list[str]:
+def rook_moves(piece:"Piece", board:"Board") -> list[str]:
     rook_dirs = [(1,0), (-1,0), (0,1), (0,-1)]
     return ray_moves(piece, rook_dirs, board)
 
-def bishop_moves(piece:Piece, board:Board) -> list[str]:
+def bishop_moves(piece:"Piece", board:"Board") -> list[str]:
     bishop_dirs = [(1,1), (1,-1), (-1,1), (-1,-1)]
     return ray_moves(piece, bishop_dirs, board)
 
-def knight_moves(piece:Piece, board:Board) -> list[str]:
+def knight_moves(piece:"Piece", board:"Board") -> list[str]:
     knight_offsets = [
     (2,1),(1,2),(-1,2),(-2,1),
     (-2,-1),(-1,-2),(1,-2),(2,-1)]
@@ -74,7 +75,7 @@ def knight_moves(piece:Piece, board:Board) -> list[str]:
         moves.append(notation)
     return [m for m in moves if m]
 
-def king_moves(piece:Piece, board:Board) -> list[str]:
+def king_moves(piece:"Piece", board:"Board") -> list[str]:
     king_offsets = [(1,1), (1,0), (1,-1),
                     (0,1),        (0,-1),
                     (-1,1), (-1,0), (-1,-1)]
@@ -87,7 +88,7 @@ def king_moves(piece:Piece, board:Board) -> list[str]:
     
     rank += 1 # index at 0 to index at 1
     enemy = "B" if piece.side == "W" else "W"
-    if not piece.moved:
+    if not piece.moved and not board.check == piece.side:
         
         # kingside 
         rook_square = f"H{rank}"
@@ -108,12 +109,18 @@ def king_moves(piece:Piece, board:Board) -> list[str]:
                 blocked = True
         if board[rook_square].piece and not board[rook_square].piece.moved and not blocked:
             moves.append(f"C{rank}")
-
-    
     return [m for m in moves if m]
 
-def pawn_moves(piece: Piece, board: Board) -> list[str]:
+def king_attacks(piece: "Piece") -> list[str|None]: 
+    file, rank = index_from_notation(piece.location)
+    offsets = [(1,1),(1,0),(1,-1),(0,1),(0,-1),(-1,1),(-1,0),(-1,-1)]
+    return [
+        notation_from_index(file+df, rank+dr)
+        for df,dr in offsets
+        if notation_from_index(file+df, rank+dr)
+    ]
 
+def pawn_moves(piece: "Piece", board: "Board") -> list[str]:
     file, rank = index_from_notation(piece.location)
 
     direction = 1 if piece.side == "W" else -1
@@ -122,32 +129,38 @@ def pawn_moves(piece: Piece, board: Board) -> list[str]:
 
     # forward
     forward = notation_from_index(file, rank + direction)
-
     if forward and not board[forward].piece:
-
         moves.append(forward)
-
         if not piece.moved:
-
             forward2 = notation_from_index(file, rank + direction * 2)
-
             if forward2 and not board[forward2].piece:
                 moves.append(forward2)
 
     # captures
     for df in (-1, 1):
-
         target_sq = notation_from_index(file + df, rank + direction)
-
         if target_sq:
-
             target = board[target_sq].piece
-
             if target and target.side != piece.side:
                 moves.append(target_sq)
 
+
+    # en passant
+    for dr in (-1, 1):
+        target_pn = notation_from_index(file + dr, rank)
+        if target_pn and board[target_pn].piece and board[target_pn].piece.type == "P" and board[target_pn].piece.passantable:
+            moves.append(notation_from_index(file + dr, rank + direction))
     return moves
 
+def pawn_attacks(piece: "Piece") -> list[str]:
+    file, rank = index_from_notation(piece.location)
+    direction = 1 if piece.side == "W" else -1
+    attacks = []
+    for df in (-1, 1):
+        sq = notation_from_index(file + df, rank + direction)
+        if sq:
+            attacks.append(sq)
+    return attacks
 
 
 MOVE_GENERATORS = {
@@ -183,30 +196,33 @@ class Piece():
     def draw(self):
         square = B[self.location]
         rect = self.sprite_surf.get_rect(center=square.coordinate, )
-        screen.blit(self.sprite_surf, rect)
+        SCREEN.blit(self.sprite_surf, rect)
         
-    def moves(self):
+    def moves(self) -> list[str]:
         return MOVE_GENERATORS[self.type](self, B)
-
+    
 
 class Square:
     def __init__(self, file, rank, coordinate):
         self.file: str = file  
         self.rank: str = rank
         self.coordinate: tuple[int, int] = coordinate  
-        self.piece: None | Piece = None 
+        self.piece: None | Piece = None
+        self.notation = f"{file}{rank}"
 
 
 class Board():
-    def __init__(self) -> None:
+    def __init__(self, network_role:"Network | None") -> None:
+        self.net: Network | None = network_role
         self.squares: dict[str, Square]= {}
         self.pieces: list[Piece] = []
         self.board_corner = (WIDTH/2)-(HEIGHT/2)
         self.square_length = HEIGHT / 8
         
-        self.turn = "W"
+        self.turn: Literal["W", "B"] = "W"
         self.check: None | Literal["W", "B"] = None
     
+        
         for file_index, file in enumerate(FILES):
             for rank in range(1, 9):
                 x = self.board_corner + file_index * self.square_length + self.square_length / 2
@@ -217,22 +233,26 @@ class Board():
 
         self.setup_starting_position()
     
-    def __getitem__(self, key: str | tuple[int, int]) -> Square:
+    def __getitem__(self, key: str | tuple[int|str, int]) -> Square:
         if isinstance(key, tuple):
+            
             file, rank = key
-            tempkey = notation_from_index(file, rank)
-            if tempkey is None:
-                raise KeyError("Square out of bounds")
-            key = tempkey
+            if isinstance(file, int):
+                tempkey = notation_from_index(file, rank)
+                if tempkey is None:
+                    raise KeyError("Square out of bounds")
+                key = tempkey
+            else:
+                key = f"{file}{rank}"
         return self.squares[key]
     
-    def _add_piece(self, side, piece_type, location):
+    def _add_piece(self, side:Literal["B", "W"], piece_type:Literal["K", "Q", "R", "B", "N", "P"], location:str) -> None:
         piece = Piece(side, piece_type, location)
         self.pieces.append(piece)
         self.squares[location].piece = piece
 
     
-    def setup_starting_position(self):
+    def setup_starting_position(self) -> None:
         for file in FILES:
             self._add_piece("W", "P", f"{file}2")
             self._add_piece("B", "P", f"{file}7")
@@ -243,21 +263,27 @@ class Board():
             self._add_piece("B", piece_type, f"{file}8")
     
     
-    def draw(self):
-        colour = [GREEN, CREAM]
+    def draw(self) -> None:
+        colour = [CREAM, GREEN]
         colour_index = 0
         for file_index, file in enumerate(FILES):
             for rank in range(0, 8):
-                pygame.draw.rect(screen, colour[colour_index], (self.board_corner + (self.square_length*file_index), (self.square_length*rank), self.square_length,self.square_length))
+                pygame.draw.rect(SCREEN, colour[colour_index], (self.board_corner + (self.square_length*file_index), (self.square_length*rank), self.square_length,self.square_length))
                 
                 colour_index = 1 - colour_index
-                screen.blit(GAME_FONT.render(f"{file}{8 - rank}", True, colour[colour_index]), ((self.board_corner  + (self.square_length*file_index)), (self.square_length*rank)), )
+                SCREEN.blit(GAME_FONT.render(f"{file}{8 - rank}", True, colour[colour_index]), ((self.board_corner  + (self.square_length*file_index)), (self.square_length*rank)), )
                 
             colour_index = 1 - colour_index
         for piece in self.pieces:
             piece.draw()
+        
+        text = "White to move" if self.turn == "W" else "Black to move"
+        SCREEN.blit(GAME_FONT.render(text, True, "white"), (0,0))
+        
+        if self.net:
+            SCREEN.blit(GAME_FONT.render(self.net.net_role, True, "white"), (0,24))
     
-    def moves(self, piece: Piece):
+    def moves(self, piece: Piece) -> tuple[list,list]:
         
         moves = []
         captures = []
@@ -305,28 +331,36 @@ class Board():
 
 
     
-    def move(self, start: Piece, end: str):
+    def move(self, moving: Piece, end: str, net_move = False) -> None:
         
-        start_not = start.location
+        start_not = moving.location
 
+        pn_direction = 1 if moving.side == "W" else -1
+        # passant capture
+        if moving.type == "P":
+            passant_square = self[end[0], int(self[end].rank) - pn_direction]
+            if passant_square and passant_square.piece and passant_square.piece.type == "P" and passant_square.piece != moving and passant_square.piece.passantable and passant_square.piece.side != moving.side:
+                self.capture(passant_square.piece)
+        
         # clear en passant flags
         for piece in self.pieces:
             if piece.type == "P":
                 piece.passantable = False
 
         # detect en passant eligibility
-        if start.type == "P" and abs(int(start.location[1]) - int(end[1])) == 2:
-            start.passantable = True
+        move_length = abs(int(moving.location[1]) - int(end[1]))
+        if moving.type == "P" and move_length == 2:
+            moving.passantable = True
 
         # castling
-        if start.type == "K" and abs(index_from_notation(start.location)[0] - index_from_notation(end)[0]) == 2:
+        if moving.type == "K" and abs(index_from_notation(moving.location)[0] - index_from_notation(end)[0]) == 2:
 
             if end[0] == "C":
-                rook = self[f"A{start.location[1]}"].piece
-                rook_target = f"D{start.location[1]}"
+                rook = self[f"A{moving.location[1]}"].piece
+                rook_target = f"D{moving.location[1]}"
             else:
-                rook = self[f"H{start.location[1]}"].piece
-                rook_target = f"F{start.location[1]}"
+                rook = self[f"H{moving.location[1]}"].piece
+                rook_target = f"F{moving.location[1]}"
 
             self.squares[rook.location].piece = None
             rook.location = rook_target
@@ -335,28 +369,35 @@ class Board():
 
         # capture
         if self.squares[end].piece:
-            self.pieces.remove(self.squares[end].piece)
-
+            self.capture(self.squares[end].piece)
+        global promotion_piece, promotion_side, promotion_square, old_location
+        old_location = moving.location
         # move piece
-        self.squares[start_not].piece = None
-        self.squares[end].piece = start
+        self.squares[moving.location].piece = None
+        self.squares[end].piece = moving
 
-        start.location = end
-        start.moved = True
+        moving.location = end
+        moving.moved = True
 
-        global promotion_piece, promotion_side, promotion_square
+        
 
         # promotion detection
-        if start.type == "P":
+        if moving.type == "P":
             rank = end[1]
 
-            if (start.side == "W" and rank == "8") or (start.side == "B" and rank == "1"):
-
-                promotion_piece = start
-                promotion_side = start.side
+            if (moving.side == "W" and rank == "8") or (moving.side == "B" and rank == "1"):
+                
+                promotion_piece = moving
+                promotion_side = moving.side
                 promotion_square = end
 
                 return 
+        
+        
+        packet = f"{start_not} {end}"
+        
+        if self.net and not net_move:
+            N.c.send(packet.encode(encoding="utf-8") )
         
         # switch turn
         self.turn = "B" if self.turn == "W" else "W"
@@ -366,17 +407,34 @@ class Board():
             self.check = self.turn
         else:
             self.check = None
+            
+        
 
+    def capture (self, piece: Piece) -> None:
+        self.pieces.remove(piece)
+        self.squares[piece.location].piece = None
     
-    
-    def is_square_attacked(self, square: str, by_side: str) -> bool:
+    def is_square_attacked(self, square: str, by_side: Literal["W", "B"]) -> bool:
         for piece in self.pieces:
-            if piece.side == by_side:
-                if square in piece.moves():
+            if piece.side != by_side:
+                continue
+
+            if piece.type == "P":
+                if square in pawn_attacks(piece):
                     return True
+
+            elif piece.type == "K":
+                if square in king_attacks(piece):
+                    return True
+
+            else:
+                if square in MOVE_GENERATORS[piece.type](piece, self):
+                    return True
+
         return False
 
-    def check_check(self, side):
+
+    def check_check(self, side: Literal["W", "B"]) -> bool :
         king = None
 
         for piece in self.pieces:
@@ -391,17 +449,25 @@ class Board():
 
         return self.is_square_attacked(king.location, enemy)
     
-    def is_checkmate(self, side):
-        if not self.check_check(side):
+    def is_checkmate(self, side: Literal["W", "B"]) -> bool:
+        if not self.check == side:
             return False
+
         
-        for pice in self.pieces:
-            if pice.side == side:
-                moves, captures = self.moves(pice)
-                if moves or captures:
-                    return False
-        return True
-    
+        king = None
+        for piece in self.pieces:
+            if piece.side == side and piece.type == "K":
+                king = piece
+                break
+
+        enemy = "B" if side == "W" else "W"
+        if king:
+            king_moves = self.moves(king)
+            print(king_moves)
+            
+            if not king_moves[0] and not king_moves[1]:
+                return True 
+        return False
 
                 
             
@@ -425,10 +491,10 @@ def notation_from_mouse(pos):
 
 
 def draw_promotion_ui():
-
+    global promotion_piece, promotion_side, promotion_square
     overlay = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
     overlay.fill((0,0,0,150))
-    screen.blit(overlay, (0,0))
+    SCREEN.blit(overlay, (0,0))
 
     box_size = HEIGHT // 8
     start_x = WIDTH//2 - (box_size*2)
@@ -440,8 +506,8 @@ def draw_promotion_ui():
 
         rect = pygame.Rect(start_x + i*box_size, y, box_size, box_size)
 
-        pygame.draw.rect(screen, "white", rect)
-        pygame.draw.rect(screen, "black", rect, 2)
+        pygame.draw.rect(SCREEN, "white", rect)
+        pygame.draw.rect(SCREEN, "black", rect, 2)
 
         notation = f"{promotion_side}{piece_type}"
 
@@ -451,7 +517,7 @@ def draw_promotion_ui():
 
         img = pygame.transform.smoothscale(img, (box_size*0.8, box_size*0.8))
 
-        screen.blit(img, img.get_rect(center=rect.center))
+        SCREEN.blit(img, img.get_rect(center=rect.center))
 
         rects.append((rect, piece_type))
 
@@ -459,19 +525,16 @@ def draw_promotion_ui():
 
 def draw_win_ui():
 
-    # dark overlay
     overlay = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
     overlay.fill((0, 0, 0, 180))
-    screen.blit(overlay, (0, 0))
+    SCREEN.blit(overlay, (0, 0))
 
-    # determine winner
     if B.turn == "W":
         text = "Black Wins"
     else:
         text = "White Wins"
 
 
-    # create large font
     win_font = pygame.font.SysFont(None, 72)
 
     text_surf = win_font.render(text, True, (0, 0, 0))
@@ -480,9 +543,9 @@ def draw_win_ui():
     padding = 20
     box_rect = text_rect.inflate(padding*2, padding*2)
 
-    pygame.draw.rect(screen, (240, 240, 240), box_rect)
+    pygame.draw.rect(SCREEN, (240, 240, 240), box_rect)
 
-    screen.blit(text_surf, text_rect)
+    SCREEN.blit(text_surf, text_rect)
 
     
 
@@ -493,121 +556,257 @@ def draw_rect_alpha(surface, color, rect):
 
 def rect_from_notation(square:str) -> pygame.Rect:
     return pygame.Rect(B[square].coordinate[0] - B.square_length//2, B[square].coordinate[1]- B.square_length//2, B.square_length, B.square_length)
+old_location: str | None = None
+promotion_piece: "Piece | None" = None
+promotion_side: str | None = None
+promotion_square: str | None = None
+promotion_options = ["Q", "R", "B", "N"]
+def run():
+    
+    clock = pygame.time.Clock()
+    running = True
+    global promotion_piece, promotion_square, promotion_side, old_location
+    
+    
+
+    
+    selected_piece: None | Piece = None
+    moves = []
+    captures = []
+    checkmate = False
+    while running:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
+                selected_piece = None
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                if checkmate:
+                    running=False
+                    pygame.time.wait(300)
+                if promotion_piece:
+                    rects = draw_promotion_ui()
+                    for rect, piece_type in rects:
+                        if rect.collidepoint(event.pos):
+                            B.pieces.remove(promotion_piece)
+                            new_piece = Piece(
+                                promotion_side,
+                                piece_type,
+                                promotion_square
+                            )
+                            new_piece.moved = True
+                            B.pieces.append(new_piece)
+                            B.squares[promotion_square].piece = new_piece
+                            packet = f"{old_location} {promotion_side} {piece_type} {promotion_square}"
+                            
+                            promotion_piece = None
+                            promotion_side = None
+                            promotion_square = None
+
+                           
+                            if B.net:
+                                B.net.c.send(packet.encode())
+                            B.turn = "B" if B.turn == "W" else "W"
+                            B.check_check(B.turn)
+                            checkmate = B.is_checkmate(B.turn)
+                square = notation_from_mouse(event.pos)
+                if not square:
+
+                    selected_piece = None
+                    moves, captures = [], []
+                    continue
+                
+                if selected_piece:
+                    if square in moves + captures:
+                        B.move(selected_piece, square)
+                        selected_piece = None
+                        
+                        checkmate = B.is_checkmate(B.turn)
+
+                    elif B[square].piece and B[square].piece.side == B.turn:
+                        selected_piece = B[square].piece
+                    else:
+                        selected_piece = None
+                else:
+                    if B[square].piece and B[square].piece.side == B.turn:
+                        if network_role:
+                            if B.turn == network_role:
+                                selected_piece = B[square].piece
+                        else:
+                            selected_piece = B[square].piece
+
+
+                if selected_piece:
+                    moves, captures = B.moves(selected_piece)
+                else:
+                    moves, captures = [], []
 
 
 
+        SCREEN.fill("gray20")
 
 
+        B.draw()
 
 
-B = Board()
-selected_piece: None | Piece = None
-moves = []
-captures = []
-checkmate = False
-while running:
-    # poll for events
-    # pygame.QUIT event means the user clicked X to close your window
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-            
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            if checkmate:
-                running=False
-                pygame.time.wait(300)
-            if promotion_piece:
-                rects = draw_promotion_ui()
-                for rect, piece_type in rects:
-                    if rect.collidepoint(event.pos):
-                        # replace pawn
-                        B.pieces.remove(promotion_piece)
+        square = notation_from_mouse(pygame.mouse.get_pos())
+        if square:
+            square_rect = rect_from_notation(square)
+            draw_rect_alpha(SCREEN, (255,255,0, 25) , square_rect)
+        if selected_piece:
+            square_rect = rect_from_notation(selected_piece.location)
+            draw_rect_alpha(SCREEN, (255,255,0, 50) , square_rect)
+            for move in moves:
+                square_rect = rect_from_notation(move)
+                draw_rect_alpha(SCREEN, (0,0,255, 50) , square_rect)
+            for move in captures:
+                square_rect = rect_from_notation(move)
+                draw_rect_alpha(SCREEN, (255,0,0, 50) , square_rect)
+
+        if B.check:
+            for piece in B.pieces:
+                if piece.side == B.check and piece.type == "K":
+                    king = piece
+                    square_rect = rect_from_notation(king.location)
+                    draw_rect_alpha(SCREEN, (255,0,255, 50) , square_rect)
+
+        if promotion_piece:
+            draw_promotion_ui()
+
+        if checkmate:
+            B.draw()
+            draw_win_ui()
+
+
+        pygame.display.flip()
+        if B.net and B.turn != B.net.net_role:
+            ready, _, _ = select.select([N.c], [], [], 0)
+
+            if ready:
+                received = N.c.recv(1024).decode()
+                if received:
+                    move = received.split(" ")
+                    if len(move) == 4:
+                        print(move)
+                        old_location, promotion_side, piece_type, promotion_square = move
+                        B.pieces.remove(B[old_location].piece)
+                        B.pieces.remove(B[promotion_square].piece)
+                        
                         new_piece = Piece(
                             promotion_side,
                             piece_type,
                             promotion_square
                         )
+                        
                         new_piece.moved = True
+                        
                         B.pieces.append(new_piece)
                         B.squares[promotion_square].piece = new_piece
-                        # clear promotion state
-                        promotion_piece = None
-                        promotion_side = None
-                        promotion_square = None
-                        # switch turn NOW
                         B.turn = "B" if B.turn == "W" else "W"
-            square = notation_from_mouse(event.pos)
-            if not square:
+                        B.check_check(B.turn)
+                        checkmate = B.is_checkmate(B.turn)
+                        
+                    else:
+                        B.move(B[move[0]].piece, move[1], net_move=True)
+                        checkmate = B.is_checkmate(B.turn)
 
-                selected_piece = None
-                moves, captures = [], []
-                continue
-            
-            if selected_piece:
-                if square in moves + captures:
-                    B.move(selected_piece, square)
-                    selected_piece = None
-                    checkmate = B.is_checkmate(B.turn)
-
-                elif B[square].piece and B[square].piece.side == B.turn:
-                    selected_piece = B[square].piece
-                else:
-                    selected_piece = None
-            else:
-                if B[square].piece and B[square].piece.side == B.turn:
-                    selected_piece = B[square].piece
+        clock.tick(60) 
 
 
-            if selected_piece:
-                moves, captures = B.moves(selected_piece)
-            else:
-                moves, captures = [], []
-
-                            
-                    
-                    
-            
-    # fill the screen with a color to wipe away anything from last frame
-    screen.fill("gray20")
-
+class Network:
+    def __init__(self, net_role, ip="localhost", port=38519) -> None:
+        if net_role is None:
+            return
+        self.net_role = net_role
+        self.ip = ip
+        self.port = port
     
-    B.draw()
-    
-    
-    square = notation_from_mouse(pygame.mouse.get_pos())
-    if square:
-        square_rect = rect_from_notation(square)
-        draw_rect_alpha(screen, (255,255,0, 25) , square_rect)
-    if selected_piece:
-        square_rect = rect_from_notation(selected_piece.location)
-        draw_rect_alpha(screen, (255,255,0, 50) , square_rect)
-        for move in moves:
-            square_rect = rect_from_notation(move)
-            draw_rect_alpha(screen, (0,0,255, 50) , square_rect)
-        for move in captures:
-            square_rect = rect_from_notation(move)
-            draw_rect_alpha(screen, (255,0,0, 50) , square_rect)
+    def run_client(self):
+        self.c = socket.socket()         
+        self.c.connect((self.ip, self.port))
+        print(f"Connecting to {self.ip}:{self.port}")
+        print(self.c.recv(1024).decode())
+        self.c.sendall(b'pong')
+        run()
+
+        self.c.close()
         
-    if B.check:
-        for piece in B.pieces:
-            if piece.side == B.check and piece.type == "K":
-                king = piece
-        square_rect = rect_from_notation(king.location)
-        draw_rect_alpha(screen, (255,0,255, 50) , square_rect)
-    
-    if promotion_piece:
-        draw_promotion_ui()
-        
-    if checkmate:
-        B.draw()
-        draw_win_ui()
-    
-        
-    pygame.display.flip()
+    def run_host(self):
+        self.s = socket.socket()
+        self.s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.s.bind(('', self.port))
+        self.s.listen(1)
 
-    clock.tick(60)  # limits FPS to 60
-    
+        print(f"Waiting for network connection on {self.port}")
+        self.c, self.addr = self.s.accept()
+        print('Got connection from', self.addr)
 
+        self.c.sendall(b'ping')
         
+        print(self.c.recv(1025).decode())
+        run()
+        
+        self.c.close()
+        self.s.close()
+        
+        
+DEFAULT_PORT = 38519
+
+
+parser = argparse.ArgumentParser(description="Chess")
+
+mode = parser.add_mutually_exclusive_group()
+
+mode.add_argument(
+    "-H", "--host",
+    nargs="*",
+    metavar="PORT",
+    help="Host a multiplayer game"
+)
+
+mode.add_argument(
+    "-C", "--client",
+    nargs="+",
+    metavar=("IP", "PORT"),
+    help="Connect to a multiplayer game"
+)
+
+args = parser.parse_args()
+
+
+if args.host is not None:
+    network_role = "W"
+    port = DEFAULT_PORT
+
+    if len(args.host) == 1:
+        port = int(args.host[0])
+    elif len(args.host) > 1:
+        parser.error("--host accepts at most PORT")
+    N = Network(network_role, port=port)
+    B = Board(N)
+    N.run_host()
+
+
+elif args.client:
+    if len(args.client) not in (1, 2):
+        parser.error("--client requires IP [PORT]")
+
+    network_role = "B"
+
+    ip = args.client[0]
+    port = DEFAULT_PORT
+    if len(args.client) == 2:
+        port = int(args.client[1])
+
+    N = Network(network_role, ip=ip, port=port)
+    B = Board(N)
+    N.run_client()
+
+
+else:
+    network_role = None
+    B = Board(network_role)
+    run()
 
 pygame.quit()
