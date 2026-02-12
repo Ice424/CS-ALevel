@@ -5,20 +5,27 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
-    {
-      "query": "path:Obsidian/Design",
-      "color": {
-        "a": 1,
-        "rgb": 14701138
-      }
-    },
     {
       "query": "path:Obsidian/CS  ",
       "color": {
         "a": 1,
         "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:Obsidian/Design/Materials  ",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:Obsidian/Design",
+      "color": {
+        "a": 1,
+        "rgb": 16735324
       }
     }
   ],
@@ -32,6 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7132754626224406,
+  "scale": 0.5087618855792551,
   "close": false
 }

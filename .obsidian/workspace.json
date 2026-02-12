@@ -1,38 +1,40 @@
 {
   "main": {
-    "id": "656b6aca51d4060f",
+    "id": "371612d44b2f579f",
     "type": "split",
     "children": [
       {
-        "id": "1cdec4a0bcf38836",
+        "id": "41d62128b00265b6",
         "type": "tabs",
         "children": [
           {
-            "id": "8d975954e4542757",
+            "id": "724c6cb27a79e8c7",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Obsidian/Clippings/TopView_crop.png"
+                "file": "Obsidian/Design/Metal forming processes.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "TopView_crop"
+              "icon": "lucide-file",
+              "title": "Metal forming processes"
             }
           },
           {
-            "id": "c3f4593ffafc7846",
+            "id": "957ab05cfb886515",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "release-notes",
               "state": {
-                "file": "Obsidian/Clippings/TopView_crop.png"
+                "currentVersion": "1.11.5"
               },
-              "icon": "lucide-image",
-              "title": "TopView_crop"
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
             }
           },
           {
-            "id": "51aa7418ef798b0a",
+            "id": "59d99e75d362b644",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -40,23 +42,35 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "ca436e7c41a085a5",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "7131ec43679121a6",
+    "id": "4db448ea59d80787",
     "type": "split",
     "children": [
       {
-        "id": "bdd35d5886fc4416",
+        "id": "f0b91f8d6039a660",
         "type": "tabs",
         "children": [
           {
-            "id": "fbbddddf1d4afb8b",
+            "id": "0721390ed629ae8e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -69,7 +83,7 @@
             }
           },
           {
-            "id": "2e02766262421ed5",
+            "id": "cb8131dc5fbb1fdd",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -86,7 +100,7 @@
             }
           },
           {
-            "id": "e6c94f2d822dd28b",
+            "id": "6983df2d36e93a70",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -102,20 +116,19 @@
     "width": 300
   },
   "right": {
-    "id": "45ffa7e2e311959d",
+    "id": "cf3da7462f309c36",
     "type": "split",
     "children": [
       {
-        "id": "05c9ae9550c2c6fd",
+        "id": "551cf8950d57bfcd",
         "type": "tabs",
         "children": [
           {
-            "id": "a451777698fedd3c",
+            "id": "487cd244b25fd88a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian/CS/Catapult Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,25 +138,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Catapult Project"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "1963ae29a5b41076",
+            "id": "878cd40f61e3806c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian/CS/Catapult Project.md",
+                "file": "Commniactions/Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Catapult Project"
+              "title": "Outgoing links from Questions"
             }
           },
           {
-            "id": "1ff62ac1db7d2032",
+            "id": "756826f973f942f5",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -158,22 +171,22 @@
             }
           },
           {
-            "id": "a1540a47052e7eb3",
+            "id": "846407f6e71dc2fc",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian/CS/Catapult Project.md",
+                "file": "Design/Designers/Margaret Calvert.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Catapult Project"
+              "title": "Outline of Margaret Calvert"
             }
           },
           {
-            "id": "047743f341d29baa",
+            "id": "2e3b8afe249aa011",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -181,23 +194,13 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "c32d9de584a9e134",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
-            }
           }
         ],
         "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 248.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,27 +216,54 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "51aa7418ef798b0a",
+  "active": "ca436e7c41a085a5",
   "lastOpenFiles": [
-    "Obsidian/CS/Catapult Project.md",
-    "catapult flow.md",
-    "Obsidian/Clippings/TopView_crop.png",
-    "input.png",
-    "input.jpg",
-    "Obsidian/Design/Types of Metals.md",
-    "Obsidian/Design/Scales of production.md",
-    "Obsidian/Design/Metal forming processes.md",
-    "Obsidian/Design/Manufacturing.md",
-    "Obsidian/Design/Key Words.md",
-    "Obsidian/Design/Genus of Design/Post WW.md",
-    "Obsidian/CS/CS50P - Regex.md",
-    "Obsidian/CS/business tour.md",
-    "Mermiad.md",
-    "python/Chess/requirements.txt",
-    "python/Chess/main.py",
-    "python/Chess",
     "output2.png",
     "output1.png",
-    "output0.png"
+    "output0.png",
+    "input.png",
+    "catapult flow.md",
+    "Obsidian/Design/Materials/Materials.md",
+    "Obsidian/Design/Materials/Metal finishes.md",
+    "Obsidian/Design/Materials",
+    "Obsidian/Design/Materials/Metals.md",
+    "Obsidian/Design/Materials/Metal forming processes.md",
+    "Obsidian/Design/Untitled.md",
+    "Obsidian/Design/Materials/Polymers.md",
+    "Obsidian/Design/Materials/Plywood.md",
+    "Obsidian/Design/Scales of production.md",
+    "python/OOP problem Set/Q8.py",
+    "python/OOP problem Set/Q9.py",
+    "python/OOP problem Set/Q4-5.py",
+    "python/OOP problem Set/Q6-7.py",
+    "python/OOP problem Set/Q2.py",
+    "python/OOP problem Set/Q10.py",
+    "python/OOP problem Set/Q1.py",
+    "python/OOP problem Set",
+    "python/Chess/sprites/WR.png",
+    "python/Chess/sprites/WQ.png",
+    "python/Chess/sprites/WP.png",
+    "python/Chess/sprites/WN.png",
+    "python/Chess/sprites/WK.png",
+    "python/Chess/sprites/WB.png",
+    "python/Chess/sprites/BR.png",
+    "python/Chess/sprites",
+    "Obsidian/Design/Genus of Design/Designing for war.md",
+    "Obsidian/CS/Catapult Project.md",
+    "Obsidian/CS/CS50P - Regex.md",
+    "Mermiad.md",
+    "Obsidian/Design/Key Words.md",
+    "Obsidian/Design/Manufacturing.md",
+    "Excalidraw/Drawing 2025-11-13 10.07.17.excalidraw.md",
+    "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
+    "SchoolSetup/WerewolfBot/README.md",
+    "SchoolSetup/ChillOriginsReasources/README.md",
+    "SchoolSetup/ChillOriginsData/README.md",
+    "Obsidian/CS/business tour.md",
+    "appleDesignSpatialInput2023.md",
+    "Obsidian/CS/Commniactions/Communication Problem Set.md",
+    "Obsidian/CS/Commniactions/Questions.md",
+    "Obsidian/CS/Commniactions/Write Up.md",
+    "Design/Designers/Untitled.canvas"
   ]
 }
