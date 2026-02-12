@@ -183,14 +183,19 @@ class Piece():
         self.notation = f"{self.side}{self.type}"
         self.passantable = False
         self.moved = False
+        self.location = location
         
+        self.refresh_sprite()
+    
+    def refresh_sprite(self):
+        self.notation = f"{self.side}{self.type}"
         raw_surf = pygame.image.load(os.path.join("sprites", f"{self.notation}.png")).convert_alpha()
         piece_size = int(HEIGHT / 8 * 0.85)
         self.sprite_surf = pygame.transform.smoothscale(raw_surf, (piece_size, piece_size))
         
         
         
-        self.location = location
+       
     def __str__(self) -> str:
         return self.notation 
     def draw(self):
@@ -382,7 +387,7 @@ class Board():
         
 
         # promotion detection
-        if moving.type == "P":
+        if moving.type == "P" and not net_move:
             rank = end[1]
 
             if (moving.side == "W" and rank == "8") or (moving.side == "B" and rank == "1"):
@@ -454,20 +459,14 @@ class Board():
             return False
 
         
-        king = None
         for piece in self.pieces:
-            if piece.side == side and piece.type == "K":
-                king = piece
-                break
+            if piece.side == side:
+                moves, captures = self.moves(piece)
+                if moves or captures:
+                    return False
 
-        enemy = "B" if side == "W" else "W"
-        if king:
-            king_moves = self.moves(king)
-            print(king_moves)
-            
-            if not king_moves[0] and not king_moves[1]:
-                return True 
-        return False
+
+        return True
 
                 
             
@@ -598,7 +597,7 @@ def run():
                             new_piece.moved = True
                             B.pieces.append(new_piece)
                             B.squares[promotion_square].piece = new_piece
-                            packet = f"{old_location} {promotion_side} {piece_type} {promotion_square}"
+                            packet = f"{old_location} {promotion_square} {piece_type}"
                             
                             promotion_piece = None
                             promotion_side = None
@@ -687,25 +686,12 @@ def run():
                 received = N.c.recv(1024).decode()
                 if received:
                     move = received.split(" ")
-                    if len(move) == 4:
-                        print(move)
-                        old_location, promotion_side, piece_type, promotion_square = move
-                        B.pieces.remove(B[old_location].piece)
-                        B.pieces.remove(B[promotion_square].piece)
-                        
-                        new_piece = Piece(
-                            promotion_side,
-                            piece_type,
-                            promotion_square
-                        )
-                        
-                        new_piece.moved = True
-                        
-                        B.pieces.append(new_piece)
-                        B.squares[promotion_square].piece = new_piece
-                        B.turn = "B" if B.turn == "W" else "W"
-                        B.check_check(B.turn)
-                        checkmate = B.is_checkmate(B.turn)
+                    if len(move) == 3:
+                        start, end, promo = move
+                        B.move(B[start].piece, end, net_move=True)
+                        B[end].piece.type = promo
+                        B[end].piece.refresh_sprite()
+
                         
                     else:
                         B.move(B[move[0]].piece, move[1], net_move=True)
