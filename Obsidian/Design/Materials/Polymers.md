@@ -138,3 +138,5 @@ they are polymers that can return to their shape
 - good thermal resistance
 - good weather resistance
 - good electrical insulator
+
+[[Polymer forming Processes]]
