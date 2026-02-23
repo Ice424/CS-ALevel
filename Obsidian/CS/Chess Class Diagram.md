@@ -19,8 +19,8 @@ class Square
 ```
 ```mermaid
 classDiagram
+	direction RL
     class Board {
-        - \_\_init__() None
         + \_\_getitem__(key) Square 
         - \_add_piece(side, piece_type, location) None
     
@@ -42,20 +42,36 @@ classDiagram
         }
 
     class Piece {
-        - \_\_init__(side, piece_type, location) None
-        - \_\_str__() str
-        + draw()
-        + moves()
+		side: Literal["W", "B"]
+		type: Literal["K", "Q", "R", "B", "N", "P"]
+		notation: Str
+		passantable: Bool
+		moved: Bool
+		location: Str
+        + draw() None
+        + moves() List[Str]
+        + refresh_sprite() None
     }
 
     class Square {
-        + file
-        + rank
-        + coordinate 
-        + Piece
-        + notation
+        + file: Str
+        + rank: Str
+        + coordinate: Tuple[int, int]
+        + Piece: Piece
+        + notation: Str
+    }
+    
+    class Network {
+	    + ip: Str
+	    + port: int
+	    + net_role: Literal["W", "B"]
+    
+	    + run_client(): None
+	    + run_host(): None
     }
 Board *-- Square
 Board o-- Piece 
+Board <-- Network
 Square -- Piece
 ```
+

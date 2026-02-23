@@ -37,7 +37,6 @@ def notation_from_index(file:int, rank:int):
     return None
 
 
-
 def ray_moves(piece, directions, board):
     file, rank = index_from_notation(piece.location)
     moves = []
@@ -173,10 +172,6 @@ MOVE_GENERATORS = {
 }
 
 class Piece():
-    """
-    Docstring for Piece
-    
-    """
     def __init__(self, side:Literal["B", "W"], piece_type:Literal["K", "Q", "R", "B", "N", "P"], location:str):
         self.side = side
         self.type = piece_type

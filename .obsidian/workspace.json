@@ -49,12 +49,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Manufacturing.md",
+                "file": "Obsidian/CS/Chess Class Diagram.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Manufacturing"
+              "title": "Chess Class Diagram"
             }
           }
         ],
@@ -196,9 +196,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "743e530a8e4704e8",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -218,16 +228,17 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "ca436e7c41a085a5",
+  "active": "743e530a8e4704e8",
   "lastOpenFiles": [
     "Mermiad.md",
+    "catapult flow.md",
+    "Obsidian/Design/Manufacturing.md",
     "input.png",
     "Obsidian/Design/Genus of Design/Better living through chemistary.md",
     "Obsidian/CS/Chess Class Diagram.md",
     "output2.png",
     "output1.png",
     "output0.png",
-    "catapult flow.md",
     "Obsidian/Design/Materials/Materials.md",
     "Obsidian/Design/Materials/Metal finishes.md",
     "Obsidian/Design/Materials",
@@ -256,7 +267,6 @@
     "Obsidian/CS/Catapult Project.md",
     "Obsidian/CS/CS50P - Regex.md",
     "Obsidian/Design/Key Words.md",
-    "Obsidian/Design/Manufacturing.md",
     "Excalidraw/Drawing 2025-11-13 10.07.17.excalidraw.md",
     "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
     "SchoolSetup/WerewolfBot/README.md",
