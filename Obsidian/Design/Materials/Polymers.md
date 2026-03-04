@@ -140,3 +140,5 @@ they are polymers that can return to their shape
 - good electrical insulator
 
 [[Polymer forming Processes]]
+[[Joining Polymers]]
+[[Polymer finishes]]
