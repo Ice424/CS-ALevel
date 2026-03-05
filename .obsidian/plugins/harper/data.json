@@ -1,5 +1,5 @@
 {
-  "ignoredLints": "{\"context_hashes\":[2129495775242338093,695523535815228509,16424314765474981770,523380765651539864,15184427720010703889,3028882751611284318]}",
+  "ignoredLints": "{\"context_hashes\":[17360604226045081412,16655691349516474643,2129495775242338093,695523535815228509,523380765651539864]}",
   "useWebWorker": true,
   "lintSettings": {
     "ACoupleMore": null,
@@ -558,18 +558,11 @@
   },
   "userDictionary": [
     "Acrylonitrile",
-    "Duralumin",
     "Elastomers",
     "Polymethylmethacrylate",
-    "aluminum",
     "butadiene",
-    "dural",
-    "duralum",
-    "duraluminium",
-    "duraluminum",
     "fluidised",
     "fluidized",
-    "ium",
     "styrene",
     "terephthalate",
     "thermoforming",

@@ -139,6 +139,7 @@ they are polymers that can return to their shape
 - good weather resistance
 - good electrical insulator
 
-[[Polymer forming Processes]]
-[[Joining Polymers]]
-[[Polymer finishes]]
+[[Polymer Forming Processes]]
+[[Polymer Joining]]
+[[Polymer Finishes]]
+[[Polymer Enhancement]]
