@@ -1,0 +1,6 @@
+[[Charles & Ray Eames]]
+[[Dieter Rams]]
+[[James Dyson]]
+[[Margaret Calvert]]
+[[Marianne Brandt]]
+[[Philippe starck]]

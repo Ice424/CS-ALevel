@@ -10,7 +10,7 @@ can be reheated and remoulded time and time again
 - scratches easily
 - SWT 80C
 -
-## HIPS
+#### HIPS
 - high impact polystyrene
 - tough
 - hard and rigid
@@ -41,7 +41,7 @@ can be reheated and remoulded time and time again
 
 #### PVC
 - polyvinyl chloride
-- uPVC (rigid)
+- uPuPVCVC (rigid)
 - hard and tough
 - good chemical and weather resistance
 - low cost

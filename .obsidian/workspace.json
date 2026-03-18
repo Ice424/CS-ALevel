@@ -8,59 +8,55 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c38a5ba211d7636b",
+            "id": "512f409ddb12b492",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Materials/Polymers/Polymer Joining.md",
+                "file": "Obsidian/Design/DESIGN THEORY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Polymer Joining"
+              "title": "DESIGN THEORY"
             }
           },
           {
-            "id": "79ac0350e9c03014",
+            "id": "0bda3f95adbff63c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Materials/Polymers/Polymer Joining.md",
+                "file": "Obsidian/Design/Materials/Composite Materials.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Polymer Joining"
+              "title": "Composite Materials"
             }
           },
           {
-            "id": "b4947398a609acc6",
+            "id": "438df637e90fca58",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/Design/Materials/Polymers/Polymer Joining.md",
+                "file": "Obsidian/Design/Materials/Polymers/Polymers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Polymer Joining"
+              "title": "Polymers"
             }
           },
           {
-            "id": "d88abe1cbef90c34",
+            "id": "074534facdb6fa89",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Materials/Polymers/Polymer Forming Processes.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Polymer Forming Processes"
+              "title": "New tab"
             }
           }
         ],
@@ -184,13 +180,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/Designers/Margaret Calvert.md",
-                "followCursor": false,
+                "file": "Mermiad.md",
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Margaret Calvert"
+              "title": "Outline of Mermiad"
             }
           },
           {
@@ -204,7 +200,7 @@
             }
           },
           {
-            "id": "743e530a8e4704e8",
+            "id": "6017a4ff15d0b140",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -234,54 +230,56 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "b4947398a609acc6",
+  "active": "438df637e90fca58",
   "lastOpenFiles": [
-    "Obsidian/Design/Materials/Polymers/Polymer Forming Processes.md",
-    "Obsidian/Design/Materials/Polymers/Polymer Finishes.md",
-    "Obsidian/Design/Materials/Polymers/Polymer Enhancement.md",
     "Obsidian/Design/Materials/Polymers/Polymers.md",
-    "Obsidian/Design/Materials/Metals/Metals.md",
-    "Obsidian/Design/Materials/Polymers/Polymer Joining.md",
-    "Obsidian/Design/Materials/Metals/Metal finishes.md",
-    "Obsidian/Design/Materials/Materials.md",
-    "Obsidian/Design/Materials/Metals",
-    "Obsidian/Design/Materials/Polymers",
+    "Obsidian/Design/Materials/Polymers/Polymer Enhancement.md",
+    "Obsidian/Design/DESIGN THEORY.md",
+    "Obsidian/Design/Manufacturing.md",
+    "Obsidian/Design/Key Words.md",
+    "Obsidian/Design/Materials/Plywood.md",
+    "Obsidian/Design/Health & Safety.md",
+    "Obsidian/Design/Materials/Composite Materials.md",
+    "Excalidraw/Drawing 2026-03-18 10.24.57.excalidraw.md",
+    "Obsidian/Design/Materials/MATERIALS.md",
     "Obsidian/CS/Networks.md",
-    "Obsidian/Clippings/Pasted image 20260212100922.png",
-    "Obsidian/CS/CS50P - Regex.md",
-    "Obsidian/CS/Chess Class Diagram.md",
-    "Obsidian/CS/Catapult Project.md",
-    "Obsidian/CS/business tour.md",
+    "same number of characters as mc username.md",
     "Mermiad.md",
     "catapult flow.md",
-    "Obsidian/Design/Manufacturing.md",
+    "Obsidian/Design/Designers/THE DESIGNERS.md",
+    "Obsidian/Design/Genius of Design/The artist.md",
+    "Obsidian/Design/Genius of Design/GENIUS OF DESIGN.md",
+    "Obsidian/Clippings/Pasted image 20260311125327.png",
+    "Obsidian/Clippings/Pasted image 20260212100922.png",
+    "Obsidian/Clippings/Pasted image 20260311125315.png",
+    "Obsidian/Design/Genus of Design/GENIUS OF DESIGN.md",
+    "Obsidian/Design/Genius of Design/Post WW.md",
+    "Obsidian/Design/Genius of Design/MB-188 chair.md",
+    "Obsidian/Design/Genius of Design/Designs for living.md",
+    "Obsidian/Design/Genius of Design/Designing for war.md",
+    "Obsidian/Design/Genius of Design/Designing for industry.md",
+    "Obsidian/Design/Genius of Design/Designers.md",
+    "Obsidian/Design/Genius of Design/Bouhaus.md",
+    "Obsidian/Design/Genius of Design/Better living through chemistary.md",
+    "Obsidian/Design/Genius of Design",
+    "Obsidian/Clippings/Pasted image 20260311123506.png",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Obsidian/Design/Materials/Metals",
+    "Obsidian/Design/Materials/Polymers",
     "input.png",
-    "Obsidian/Design/Genus of Design/Better living through chemistary.md",
     "output2.png",
     "output1.png",
     "output0.png",
     "Obsidian/Design/Materials",
-    "Obsidian/Design/Materials/Metals/Metal forming processes.md",
-    "Obsidian/Design/Untitled.md",
-    "Obsidian/Design/Materials/Plywood.md",
-    "Obsidian/Design/Scales of production.md",
     "python/OOP problem Set/Q8.py",
     "python/OOP problem Set/Q9.py",
     "python/OOP problem Set/Q4-5.py",
     "python/OOP problem Set/Q6-7.py",
     "python/OOP problem Set/Q2.py",
     "python/OOP problem Set/Q10.py",
-    "python/OOP problem Set/Q1.py",
     "python/Chess/sprites/WR.png",
     "python/Chess/sprites/WQ.png",
-    "python/Chess/sprites/WP.png",
-    "python/Chess/sprites/WN.png",
-    "python/Chess/sprites/WK.png",
-    "Obsidian/Design/Genus of Design/Designing for war.md",
-    "Obsidian/Design/Key Words.md",
-    "Excalidraw/Drawing 2025-11-13 10.07.17.excalidraw.md",
-    "Obsidian/Clippings/Jony Ives' (No Longer So) Secret Design Weapon.md",
-    "SchoolSetup/WerewolfBot/README.md",
     "Design/Designers/Untitled.canvas"
   ]
 }
