@@ -7,8 +7,8 @@ from typing import Literal
 
 # pygame setup
 pygame.init()
-WIDTH = 1280
-HEIGHT = 720
+WIDTH = 1920
+HEIGHT = 1080
 
 
 GAME_FONT = pygame.font.SysFont(None, 24)

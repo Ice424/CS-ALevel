@@ -39,24 +39,10 @@
             "id": "438df637e90fca58",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Materials/Polymers/Polymers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Polymers"
-            }
-          },
-          {
-            "id": "074534facdb6fa89",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -205,8 +191,8 @@
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
+              "icon": "lucide-ghost",
+              "title": "mermaid-toolbar-view"
             }
           }
         ],
@@ -232,16 +218,17 @@
   },
   "active": "438df637e90fca58",
   "lastOpenFiles": [
+    "Obsidian/Design/Materials/Composite Materials.md",
+    "Obsidian/Design/DESIGN THEORY.md",
+    "Obsidian/Design/Health & Safety.md",
+    "Obsidian/Design/Materials/Smart materials.md",
+    "Obsidian/Design/Materials/MATERIALS.md",
     "Obsidian/Design/Materials/Polymers/Polymers.md",
     "Obsidian/Design/Materials/Polymers/Polymer Enhancement.md",
-    "Obsidian/Design/DESIGN THEORY.md",
     "Obsidian/Design/Manufacturing.md",
     "Obsidian/Design/Key Words.md",
     "Obsidian/Design/Materials/Plywood.md",
-    "Obsidian/Design/Health & Safety.md",
-    "Obsidian/Design/Materials/Composite Materials.md",
     "Excalidraw/Drawing 2026-03-18 10.24.57.excalidraw.md",
-    "Obsidian/Design/Materials/MATERIALS.md",
     "Obsidian/CS/Networks.md",
     "same number of characters as mc username.md",
     "Mermiad.md",
@@ -260,7 +247,6 @@
     "Obsidian/Design/Genius of Design/Designing for industry.md",
     "Obsidian/Design/Genius of Design/Designers.md",
     "Obsidian/Design/Genius of Design/Bouhaus.md",
-    "Obsidian/Design/Genius of Design/Better living through chemistary.md",
     "Obsidian/Design/Genius of Design",
     "Obsidian/Clippings/Pasted image 20260311123506.png",
     "Untitled 1.canvas",
