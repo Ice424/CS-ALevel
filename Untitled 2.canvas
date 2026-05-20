@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"e2f400b800e696ae","type":"text","text":"Problems","x":16,"y":-160,"width":184,"height":66},
+		{"id":"480a93b3fce73953","type":"text","text":"Quiet server case","x":296,"y":-157,"width":250,"height":60},
+		{"id":"d794a487ebba099b","type":"text","text":"Airflow","x":296,"y":-41,"width":250,"height":60},
+		{"id":"9729f1611c2d6f97","type":"text","text":"Aesthetic case","x":296,"y":-280,"width":250,"height":60},
+		{"id":"55d3d1b876876d2b","type":"text","text":"Controllers\\mice","x":-334,"y":-157,"width":250,"height":60},
+		{"id":"359e55b74f332b8c","type":"text","text":"Desk Tidy","x":296,"y":80,"width":250,"height":60},
+		{"id":"d5bbcd5821a48410","type":"text","text":"Organisation","x":-17,"y":80,"width":250,"height":60},
+		{"id":"d1b0b74c142e6256","type":"text","text":"Speakers","x":-334,"y":80,"width":250,"height":60},
+		{"id":"22a87af453931a46","x":-334,"y":-280,"width":250,"height":60,"type":"text","text":"Sensitive materials"},
+		{"id":"def244948f05538a","x":-660,"y":-157,"width":250,"height":60,"type":"text","text":"Erganomics\n "}
+	],
+	"edges":[
+		{"id":"770d640c776b6552","fromNode":"e2f400b800e696ae","fromSide":"right","toNode":"480a93b3fce73953","toSide":"left"},
+		{"id":"14dc920edceca487","fromNode":"e2f400b800e696ae","fromSide":"bottom","toNode":"d5bbcd5821a48410","toSide":"top"},
+		{"id":"47f51ea1f0c11325","fromNode":"d5bbcd5821a48410","fromSide":"right","toNode":"359e55b74f332b8c","toSide":"left"},
+		{"id":"6141d1d031d6639e","fromNode":"480a93b3fce73953","fromSide":"bottom","toNode":"d794a487ebba099b","toSide":"top"},
+		{"id":"ed1ccef8e74902b6","fromNode":"480a93b3fce73953","fromSide":"top","toNode":"9729f1611c2d6f97","toSide":"bottom"},
+		{"id":"ae4127d25836fe37","fromNode":"d5bbcd5821a48410","fromSide":"left","toNode":"d1b0b74c142e6256","toSide":"right"},
+		{"id":"0613fc96723cbba6","fromNode":"e2f400b800e696ae","fromSide":"left","toNode":"55d3d1b876876d2b","toSide":"right"},
+		{"id":"affb1e40e2af8377","fromNode":"55d3d1b876876d2b","fromSide":"left","toNode":"def244948f05538a","toSide":"right"},
+		{"id":"921d84c0d64bcbb3","fromNode":"55d3d1b876876d2b","fromSide":"top","toNode":"22a87af453931a46","toSide":"bottom"}
+	]
+}

@@ -39,10 +39,17 @@
             "id": "438df637e90fca58",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "canvas",
+              "state": {
+                "file": "Untitled 2.canvas",
+                "viewState": {
+                  "x": 11.7109375,
+                  "y": -189.71875,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled 2"
             }
           }
         ],
@@ -218,6 +225,14 @@
   },
   "active": "438df637e90fca58",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Drawing 2026-05-20 12.42.37.excalidraw.md",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled 3.canvas",
+    "2026-05-20.md",
+    "Obsidian/Design/Untitled.md",
+    "Untitled.base",
     "Obsidian/Design/Materials/Composite Materials.md",
     "Obsidian/Design/DESIGN THEORY.md",
     "Obsidian/Design/Health & Safety.md",
@@ -243,14 +258,8 @@
     "Obsidian/Design/Genius of Design/Post WW.md",
     "Obsidian/Design/Genius of Design/MB-188 chair.md",
     "Obsidian/Design/Genius of Design/Designs for living.md",
-    "Obsidian/Design/Genius of Design/Designing for war.md",
-    "Obsidian/Design/Genius of Design/Designing for industry.md",
-    "Obsidian/Design/Genius of Design/Designers.md",
-    "Obsidian/Design/Genius of Design/Bouhaus.md",
     "Obsidian/Design/Genius of Design",
     "Obsidian/Clippings/Pasted image 20260311123506.png",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
     "Obsidian/Design/Materials/Metals",
     "Obsidian/Design/Materials/Polymers",
     "input.png",
@@ -263,7 +272,6 @@
     "python/OOP problem Set/Q4-5.py",
     "python/OOP problem Set/Q6-7.py",
     "python/OOP problem Set/Q2.py",
-    "python/OOP problem Set/Q10.py",
     "python/Chess/sprites/WR.png",
     "python/Chess/sprites/WQ.png",
     "Design/Designers/Untitled.canvas"
