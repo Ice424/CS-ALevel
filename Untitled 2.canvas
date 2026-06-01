@@ -8,8 +8,11 @@
 		{"id":"359e55b74f332b8c","type":"text","text":"Desk Tidy","x":296,"y":80,"width":250,"height":60},
 		{"id":"d5bbcd5821a48410","type":"text","text":"Organisation","x":-17,"y":80,"width":250,"height":60},
 		{"id":"d1b0b74c142e6256","type":"text","text":"Speakers","x":-334,"y":80,"width":250,"height":60},
-		{"id":"22a87af453931a46","x":-334,"y":-280,"width":250,"height":60,"type":"text","text":"Sensitive materials"},
-		{"id":"def244948f05538a","x":-660,"y":-157,"width":250,"height":60,"type":"text","text":"Erganomics\n "}
+		{"id":"22a87af453931a46","type":"text","text":"Sensitive materials","x":-334,"y":-280,"width":250,"height":60},
+		{"id":"def244948f05538a","type":"text","text":"Erganomics\n ","x":-660,"y":-157,"width":250,"height":60},
+		{"id":"ac6c4ed44a773f06","x":-520,"y":-11,"width":250,"height":60,"type":"text","text":"General Input device/macropad"},
+		{"id":"ef4913cfef88358f","x":-627,"y":150,"width":250,"height":60,"type":"text","text":"3D mouse"},
+		{"id":"3876ec62ef0082ec","x":-17,"y":-380,"width":250,"height":60,"type":"text","text":"Physical VisionOS Widget"}
 	],
 	"edges":[
 		{"id":"770d640c776b6552","fromNode":"e2f400b800e696ae","fromSide":"right","toNode":"480a93b3fce73953","toSide":"left"},
@@ -20,6 +23,9 @@
 		{"id":"ae4127d25836fe37","fromNode":"d5bbcd5821a48410","fromSide":"left","toNode":"d1b0b74c142e6256","toSide":"right"},
 		{"id":"0613fc96723cbba6","fromNode":"e2f400b800e696ae","fromSide":"left","toNode":"55d3d1b876876d2b","toSide":"right"},
 		{"id":"affb1e40e2af8377","fromNode":"55d3d1b876876d2b","fromSide":"left","toNode":"def244948f05538a","toSide":"right"},
-		{"id":"921d84c0d64bcbb3","fromNode":"55d3d1b876876d2b","fromSide":"top","toNode":"22a87af453931a46","toSide":"bottom"}
+		{"id":"921d84c0d64bcbb3","fromNode":"55d3d1b876876d2b","fromSide":"top","toNode":"22a87af453931a46","toSide":"bottom"},
+		{"id":"8dcbeec7c7d472b8","fromNode":"55d3d1b876876d2b","fromSide":"bottom","toNode":"ac6c4ed44a773f06","toSide":"top"},
+		{"id":"44b58dcf36ec37ad","fromNode":"ac6c4ed44a773f06","fromSide":"bottom","toNode":"ef4913cfef88358f","toSide":"top"},
+		{"id":"35ff74a45316579a","fromNode":"e2f400b800e696ae","fromSide":"top","toNode":"3876ec62ef0082ec","toSide":"bottom"}
 	]
 }
