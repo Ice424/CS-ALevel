@@ -11,49 +11,20 @@
             "id": "512f409ddb12b492",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/DESIGN THEORY.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DESIGN THEORY"
-            }
-          },
-          {
-            "id": "0bda3f95adbff63c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Design/Materials/Composite Materials.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Composite Materials"
-            }
-          },
-          {
-            "id": "438df637e90fca58",
-            "type": "leaf",
-            "state": {
               "type": "canvas",
               "state": {
                 "file": "Untitled 2.canvas",
                 "viewState": {
-                  "x": 10.305179928104856,
-                  "y": -94.78597658195059,
-                  "zoom": -0.8000000000000002
+                  "x": -170.18590867375752,
+                  "y": 1.3911831701807387,
+                  "zoom": -0.7189701470749384
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "Untitled 2"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -193,13 +164,13 @@
             }
           },
           {
-            "id": "6017a4ff15d0b140",
+            "id": "c5a80c4286946044",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "mermaid-toolbar-view"
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
             }
           }
         ],
@@ -223,30 +194,37 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "438df637e90fca58",
+  "active": "512f409ddb12b492",
   "lastOpenFiles": [
+    "Untitled 1.canvas",
+    "output2.png",
+    "input.jpg",
+    "output1.png",
+    "output0.png",
+    "input.png",
+    "full.png",
+    "Mermiad.md",
+    "Obsidian/Design/DESIGN THEORY.md",
+    "Obsidian/Design/Materials/Composite Materials.md",
+    "Obsidian/Design/Scales of production.md",
+    "Obsidian/Design/Manufacturing.md",
+    "Untitled 2.canvas",
     "Untitled.canvas",
     "Drawing 2026-05-20 12.42.37.excalidraw.md",
-    "Untitled 2.canvas",
-    "Untitled 1.canvas",
     "Untitled 3.canvas",
     "2026-05-20.md",
     "Obsidian/Design/Untitled.md",
     "Untitled.base",
-    "Obsidian/Design/Materials/Composite Materials.md",
-    "Obsidian/Design/DESIGN THEORY.md",
     "Obsidian/Design/Health & Safety.md",
     "Obsidian/Design/Materials/Smart materials.md",
     "Obsidian/Design/Materials/MATERIALS.md",
     "Obsidian/Design/Materials/Polymers/Polymers.md",
     "Obsidian/Design/Materials/Polymers/Polymer Enhancement.md",
-    "Obsidian/Design/Manufacturing.md",
     "Obsidian/Design/Key Words.md",
     "Obsidian/Design/Materials/Plywood.md",
     "Excalidraw/Drawing 2026-03-18 10.24.57.excalidraw.md",
     "Obsidian/CS/Networks.md",
     "same number of characters as mc username.md",
-    "Mermiad.md",
     "catapult flow.md",
     "Obsidian/Design/Designers/THE DESIGNERS.md",
     "Obsidian/Design/Genius of Design/The artist.md",
@@ -257,23 +235,16 @@
     "Obsidian/Design/Genus of Design/GENIUS OF DESIGN.md",
     "Obsidian/Design/Genius of Design/Post WW.md",
     "Obsidian/Design/Genius of Design/MB-188 chair.md",
-    "Obsidian/Design/Genius of Design/Designs for living.md",
     "Obsidian/Design/Genius of Design",
     "Obsidian/Clippings/Pasted image 20260311123506.png",
     "Obsidian/Design/Materials/Metals",
     "Obsidian/Design/Materials/Polymers",
-    "input.png",
-    "output2.png",
-    "output1.png",
-    "output0.png",
     "Obsidian/Design/Materials",
     "python/OOP problem Set/Q8.py",
     "python/OOP problem Set/Q9.py",
     "python/OOP problem Set/Q4-5.py",
     "python/OOP problem Set/Q6-7.py",
     "python/OOP problem Set/Q2.py",
-    "python/Chess/sprites/WR.png",
-    "python/Chess/sprites/WQ.png",
     "Design/Designers/Untitled.canvas"
   ]
 }

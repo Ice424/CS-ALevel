@@ -37,8 +37,10 @@ while True:
             print(f"{assistant.name} is on call with {assistant.current_call.name} for {assistant.time_remaining} more seconds")
             if assistant.time_remaining == 0:
                 assistant.current_call = None
+
     if calls.size >= 5 and len(assistants) == 2:
         assistants.append(Assistant())
+        
     elif calls.size < 5 and len(assistants) != 2:
         if assistants[-1].current_call == None:
             assistants.pop(-1)
