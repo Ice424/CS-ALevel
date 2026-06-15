@@ -11,17 +11,24 @@
             "id": "512f409ddb12b492",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled 2.canvas",
-                "viewState": {
-                  "x": -170.18590867375752,
-                  "y": 1.3911831701807387,
-                  "zoom": -0.7189701470749384
-                }
+                "file": "Obsidian/Design/Genius of Design/Objects of desire.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled 2"
+              "icon": "lucide-file",
+              "title": "Objects of desire"
+            }
+          },
+          {
+            "id": "55198e5ba50e8095",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -196,6 +203,8 @@
   },
   "active": "512f409ddb12b492",
   "lastOpenFiles": [
+    "Obsidian/Design/Genius of Design/Objects of desire.md",
+    "Untitled 2.canvas",
     "Untitled 1.canvas",
     "output2.png",
     "input.jpg",
@@ -208,7 +217,6 @@
     "Obsidian/Design/Materials/Composite Materials.md",
     "Obsidian/Design/Scales of production.md",
     "Obsidian/Design/Manufacturing.md",
-    "Untitled 2.canvas",
     "Untitled.canvas",
     "Drawing 2026-05-20 12.42.37.excalidraw.md",
     "Untitled 3.canvas",
@@ -234,7 +242,6 @@
     "Obsidian/Clippings/Pasted image 20260311125315.png",
     "Obsidian/Design/Genus of Design/GENIUS OF DESIGN.md",
     "Obsidian/Design/Genius of Design/Post WW.md",
-    "Obsidian/Design/Genius of Design/MB-188 chair.md",
     "Obsidian/Design/Genius of Design",
     "Obsidian/Clippings/Pasted image 20260311123506.png",
     "Obsidian/Design/Materials/Metals",
