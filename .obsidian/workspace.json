@@ -11,17 +11,10 @@
             "id": "55198e5ba50e8095",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Untitled 2.canvas",
-                "viewState": {
-                  "x": 208.84004849693935,
-                  "y": -86.96431521427512,
-                  "zoom": -0.5141004884069288
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled 2"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -196,13 +189,30 @@
   },
   "active": "55198e5ba50e8095",
   "lastOpenFiles": [
+    "python/Graphs/Obsidian/9.md",
+    "python/Graphs/Obsidian/8.md",
+    "python/Graphs/Obsidian/7.md",
+    "python/Graphs/Obsidian/6.md",
+    "python/Graphs/Obsidian/5.md",
+    "python/Graphs/Obsidian/4.md",
+    "python/Graphs/Obsidian/3.md",
+    "python/Graphs/Obsidian/2.md",
+    "python/Graphs/Obsidian/1.md",
+    "python/Graphs/Obsidian/0.md",
+    "python/Graphs/3.md",
+    "python/Graphs/2.md",
+    "python/Graphs/1.md",
+    "python/Graphs/0.md",
+    "python/Graphs/Obsidian",
+    "Untitled 2.canvas",
+    "python/Graphs/OOPGraphGeeksForGeeksAdjMatrix.py",
+    "python/Graphs",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "output1.png",
     "Obsidian/Design/Designers/Dieter Rams.md",
     "Obsidian/Design/Designers/Margaret Calvert.md",
     "Obsidian/Design/Genius of Design/Objects of desire.md",
-    "Untitled 2.canvas",
     "output2.png",
     "input.jpg",
     "output0.png",
@@ -219,19 +229,6 @@
     "Obsidian/Design/Untitled.md",
     "Untitled.base",
     "Obsidian/Design/Health & Safety.md",
-    "Obsidian/Design/Materials/Smart materials.md",
-    "Obsidian/Design/Materials/MATERIALS.md",
-    "Obsidian/Design/Materials/Polymers/Polymers.md",
-    "Obsidian/Design/Materials/Polymers/Polymer Enhancement.md",
-    "Obsidian/Design/Key Words.md",
-    "Obsidian/Design/Materials/Plywood.md",
-    "Excalidraw/Drawing 2026-03-18 10.24.57.excalidraw.md",
-    "Obsidian/CS/Networks.md",
-    "same number of characters as mc username.md",
-    "catapult flow.md",
-    "Obsidian/Design/Designers/THE DESIGNERS.md",
-    "Obsidian/Design/Genius of Design/The artist.md",
-    "Obsidian/Design/Genius of Design/GENIUS OF DESIGN.md",
     "Obsidian/Clippings/Pasted image 20260311125327.png",
     "Obsidian/Clippings/Pasted image 20260212100922.png",
     "Obsidian/Clippings/Pasted image 20260311125315.png",
@@ -242,9 +239,6 @@
     "Obsidian/Design/Materials",
     "python/OOP problem Set/Q8.py",
     "python/OOP problem Set/Q9.py",
-    "python/OOP problem Set/Q4-5.py",
-    "python/OOP problem Set/Q6-7.py",
-    "python/OOP problem Set/Q2.py",
     "Design/Designers/Untitled.canvas"
   ]
 }
