@@ -11,10 +11,17 @@
             "id": "55198e5ba50e8095",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "canvas",
+              "state": {
+                "file": "Untitled 2.canvas",
+                "viewState": {
+                  "x": -8.5,
+                  "y": -135.5,
+                  "zoom": -0.9154219945687445
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled 2"
             }
           }
         ]
@@ -189,6 +196,16 @@
   },
   "active": "55198e5ba50e8095",
   "lastOpenFiles": [
+    "Untitled 1.canvas",
+    "Obsidian/Clippings/Pasted image 20260708124811.png",
+    "Obsidian/Clippings/Pasted image 20260708125957.png",
+    "Untitled 2.canvas",
+    "Obsidian/Clippings/Pasted image 20260708125648.png",
+    "frame_211.png",
+    "Obsidian/Clippings/Pasted image 20260708125114.png",
+    "Obsidian/Clippings/Pasted image 20260708124955.png",
+    "Obsidian/Clippings/Pasted image 20260708124915.png",
+    "Untitled.canvas",
     "python/Graphs/Obsidian/9.md",
     "python/Graphs/Obsidian/8.md",
     "python/Graphs/Obsidian/7.md",
@@ -204,20 +221,14 @@
     "python/Graphs/1.md",
     "python/Graphs/0.md",
     "python/Graphs/Obsidian",
-    "Untitled 2.canvas",
     "python/Graphs/OOPGraphGeeksForGeeksAdjMatrix.py",
     "python/Graphs",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
     "output1.png",
     "Obsidian/Design/Designers/Dieter Rams.md",
     "Obsidian/Design/Designers/Margaret Calvert.md",
     "Obsidian/Design/Genius of Design/Objects of desire.md",
     "output2.png",
     "input.jpg",
-    "output0.png",
-    "input.png",
-    "full.png",
     "Mermiad.md",
     "Obsidian/Design/DESIGN THEORY.md",
     "Obsidian/Design/Materials/Composite Materials.md",
@@ -228,12 +239,7 @@
     "2026-05-20.md",
     "Obsidian/Design/Untitled.md",
     "Untitled.base",
-    "Obsidian/Design/Health & Safety.md",
-    "Obsidian/Clippings/Pasted image 20260311125327.png",
-    "Obsidian/Clippings/Pasted image 20260212100922.png",
-    "Obsidian/Clippings/Pasted image 20260311125315.png",
     "Obsidian/Design/Genius of Design",
-    "Obsidian/Clippings/Pasted image 20260311123506.png",
     "Obsidian/Design/Materials/Metals",
     "Obsidian/Design/Materials/Polymers",
     "Obsidian/Design/Materials",
