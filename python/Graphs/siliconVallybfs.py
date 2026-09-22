@@ -61,19 +61,21 @@ class Graph:
                     if node_v.distance > node_u.distance + 1:
                         node_v.distance = node_u.distance + 1
       
-    def export(self):
-        shutil.rmtree("Obsidian")
-        os.mkdir("Obsidian")
+    def export(self, export_path):
+        shutil.rmtree(export_path)
+        os.mkdir(export_path)
         for vertex in g.vertices.values():
-            with open(f"./Obsidian/{vertex.name}.md", "w") as f:
+            with open(f"./{export_path}/{vertex.name}.md", "w") as f:
                 for connection in vertex.neighbors:
                     f.write(f"[[{connection}]]\n")
     
-    def import_graph(self):
-        for (root,dirs,files) in os.walk('Obsidian'):
+    def import_graph(self, import_path):
+        for (root,dirs,files) in os.walk(import_path):
             for file in files:
                 path = Path(os.path.abspath( os.path.join(root, file)))
                 name = path.stem
+                if not str(path).endswith(".md"):
+                    continue
                 with open(path, "r") as f:
                     connections = re.findall("\\[\\[(\\w+)\\]\\]", f.read())
                 v = Vertex(name)
@@ -87,7 +89,7 @@ class Graph:
 g = Graph()
 
  
-g.import_graph()
+g.import_graph("Obsidian")
 v = g.add_vertex(Vertex("A"))
 g.bfs(v)
 g.print_graph()
