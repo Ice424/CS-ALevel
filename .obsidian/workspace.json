@@ -11,17 +11,14 @@
             "id": "55198e5ba50e8095",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled 2.canvas",
-                "viewState": {
-                  "x": -8.5,
-                  "y": -135.5,
-                  "zoom": -0.9154219945687445
-                }
+                "file": "Obsidian/Design/Sustainability/Lifecycle of a product.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled 2"
+              "icon": "lucide-file",
+              "title": "Lifecycle of a product"
             }
           }
         ]
@@ -99,8 +96,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "Obsidian/Design/Sustainability/Lifecycle of a product.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -198,10 +196,14 @@
   },
   "active": "55198e5ba50e8095",
   "lastOpenFiles": [
+    "Obsidian/Design/Sustainability/SUSTAINABILITY.md",
+    "Obsidian/Design/Sustainability/Lifecycle of a product.md",
+    "Obsidian/Design/DESIGN THEORY.md",
+    "Obsidian/Design/Sustainability",
+    "Untitled 2.canvas",
     "Untitled 1.canvas",
     "Obsidian/Clippings/Pasted image 20260708124811.png",
     "Obsidian/Clippings/Pasted image 20260708125957.png",
-    "Untitled 2.canvas",
     "Obsidian/Clippings/Pasted image 20260708125648.png",
     "frame_211.png",
     "Obsidian/Clippings/Pasted image 20260708125114.png",
@@ -232,21 +234,18 @@
     "output2.png",
     "input.jpg",
     "Mermiad.md",
-    "Obsidian/Design/DESIGN THEORY.md",
     "Obsidian/Design/Materials/Composite Materials.md",
     "Obsidian/Design/Scales of production.md",
     "Obsidian/Design/Manufacturing.md",
     "Drawing 2026-05-20 12.42.37.excalidraw.md",
     "Untitled 3.canvas",
     "2026-05-20.md",
-    "Obsidian/Design/Untitled.md",
     "Untitled.base",
     "Obsidian/Design/Genius of Design",
     "Obsidian/Design/Materials/Metals",
     "Obsidian/Design/Materials/Polymers",
     "Obsidian/Design/Materials",
     "python/OOP problem Set/Q8.py",
-    "python/OOP problem Set/Q9.py",
     "Design/Designers/Untitled.canvas"
   ]
 }
