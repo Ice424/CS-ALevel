@@ -20,7 +20,17 @@
 		{"id":"ed7f8759e229efdb","type":"text","text":"mouse mat/keyboard extensions","x":-17,"y":184,"width":250,"height":60},
 		{"id":"d1b0b74c142e6256","type":"text","text":"Speakers","x":296,"y":184,"width":250,"height":60},
 		{"id":"359e55b74f332b8c","type":"text","text":"Desk Tidy","x":-17,"y":90,"width":250,"height":60},
-		{"id":"ac6c4ed44a773f06","type":"text","text":"General Input device/macropad","x":-334,"y":59,"width":250,"height":60}
+		{"id":"ac6c4ed44a773f06","type":"text","text":"General Input device/macropad","x":-334,"y":59,"width":250,"height":60},
+		{"id":"3588490c3673399c","type":"file","file":"Obsidian/Clippings/Pasted image 20260708124811.png","x":-409,"y":-800,"width":400,"height":307},
+		{"id":"c2fa4f146b8d8955","type":"file","file":"Obsidian/Clippings/Pasted image 20260708124915.png","x":-863,"y":-646,"width":307,"height":205},
+		{"id":"ffe60f40c8d61725","type":"text","text":"Accessibility","x":-584,"y":-357,"width":250,"height":60},
+		{"id":"5771153b8406c634","type":"file","file":"Obsidian/Clippings/Pasted image 20260708124955.png","x":-960,"y":-414,"width":310,"height":175},
+		{"id":"360e49822790b5dc","type":"file","file":"Obsidian/Clippings/Pasted image 20260708125114.png","x":-1003,"y":214,"width":280,"height":207},
+		{"id":"75ff7f529f70bff4","type":"file","file":"Obsidian/Clippings/Pasted image 20260708125648.png","x":-409,"y":314,"width":400,"height":215},
+		{"id":"c3cd7035b29c52a6","type":"file","file":"Obsidian/Clippings/Pasted image 20260708125957.png","x":640,"y":-300,"width":346,"height":346},
+		{"id":"4ce64aea95d98de9","type":"file","file":"frame_211.png","x":-951,"y":-210,"width":232,"height":232}
+		{"id":"ac6c4ed44a773f06","type":"text","text":"General Input device/macropad","x":-334,"y":59,"width":250,"height":60},
+		{"id":"9c3ee828938129ed","x":-685,"y":-620,"width":300,"height":400,"type":"file","file":"Pasted image 20260706200404.png"}
 	],
 	"edges":[
 		{"id":"770d640c776b6552","fromNode":"e2f400b800e696ae","fromSide":"right","toNode":"480a93b3fce73953","toSide":"left"},
