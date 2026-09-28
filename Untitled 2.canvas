@@ -20,8 +20,7 @@
 		{"id":"ed7f8759e229efdb","type":"text","text":"mouse mat/keyboard extensions","x":-17,"y":184,"width":250,"height":60},
 		{"id":"d1b0b74c142e6256","type":"text","text":"Speakers","x":296,"y":184,"width":250,"height":60},
 		{"id":"359e55b74f332b8c","type":"text","text":"Desk Tidy","x":-17,"y":90,"width":250,"height":60},
-		{"id":"ac6c4ed44a773f06","type":"text","text":"General Input device/macropad","x":-334,"y":59,"width":250,"height":60},
-		{"id":"9c3ee828938129ed","x":-685,"y":-620,"width":300,"height":400,"type":"file","file":"Pasted image 20260706200404.png"}
+		{"id":"ac6c4ed44a773f06","type":"text","text":"General Input device/macropad","x":-334,"y":59,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"770d640c776b6552","fromNode":"e2f400b800e696ae","fromSide":"right","toNode":"480a93b3fce73953","toSide":"left"},
@@ -43,7 +42,6 @@
 		{"id":"fcdc9037de5e7e32","fromNode":"2ac1acd6da1f8a6d","fromSide":"top","toNode":"9943c5ba4da20520","toSide":"bottom"},
 		{"id":"4914bcbdf09fc426","fromNode":"d5bbcd5821a48410","fromSide":"bottom","toNode":"359e55b74f332b8c","toSide":"top"},
 		{"id":"fe944636fcdb1e30","fromNode":"359e55b74f332b8c","fromSide":"right","toNode":"d1b0b74c142e6256","toSide":"top"},
-		{"id":"c31bef95874b3b2b","fromNode":"359e55b74f332b8c","fromSide":"bottom","toNode":"ed7f8759e229efdb","toSide":"top"},
-		{"id":"1f712c07f6e2d2c9","fromNode":"1dba4c2b0eb70920","fromSide":"left","toNode":"9c3ee828938129ed","toSide":"right"}
+		{"id":"c31bef95874b3b2b","fromNode":"359e55b74f332b8c","fromSide":"bottom","toNode":"ed7f8759e229efdb","toSide":"top"}
 	]
 }
