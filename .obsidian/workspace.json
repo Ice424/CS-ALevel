@@ -11,10 +11,14 @@
             "id": "55198e5ba50e8095",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "python/Graphs/maze_solver.py",
+                "bFile": "python/Graphs/maze_solver.py",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: maze_solver.py"
             }
           }
         ]
@@ -192,12 +196,12 @@
   },
   "active": "55198e5ba50e8095",
   "lastOpenFiles": [
+    "Obsidian/Design/Sustainability/SUSTAINABILITY.md",
+    "Obsidian/Design/Sustainability/Lifecycle of a product.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
-    "Obsidian/Design/Sustainability/Lifecycle of a product.md",
     "Pasted image 20260706200404.png",
-    "Obsidian/Design/Sustainability/SUSTAINABILITY.md",
     "Obsidian/Design/DESIGN THEORY.md",
     "Obsidian/Design/Sustainability",
     "Untitled 1.canvas",

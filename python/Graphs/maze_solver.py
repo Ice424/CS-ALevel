@@ -31,7 +31,7 @@ import sys
 from collections import deque
 
 wn = turtle.Screen()               # define the turtle screen
-wn.bgcolor("blue")                # set the background colour
+wn.bgcolor("black")                # set the background colour
 wn.title("A BFS Maze Solving Program")
 wn.setup(1300,700)                  # setup the dimensions of the working window
 

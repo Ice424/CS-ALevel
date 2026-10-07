@@ -87,21 +87,14 @@ class BinaryTree:
 
 
 # Main program roots here
-items = ["E", "B", "G", "A", "C", "F", "H"]
+items = [56, 26, 200, 18, 28, 190, 213, 12, 24, 27]
 binary_tree = BinaryTree()
 for index in range(0, len(items)):
     binary_tree.add(items[index])
 # Traverse the binary tree
 print("Breadth first traversal:")
 binary_tree.bft()
-binary_tree.delete("B")
-binary_tree.bft()
-print("Pre-order traversal:")
-binary_tree.preorder(binary_tree.root)
-print("In-order traversal:")
-binary_tree.inorder(binary_tree.root)
-print("Post-order traversal:")
-binary_tree.postorder(binary_tree.root)
+
 
 
 
