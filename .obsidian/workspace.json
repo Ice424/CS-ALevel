@@ -11,14 +11,14 @@
             "id": "55198e5ba50e8095",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "python/Graphs/maze_solver.py",
-                "bFile": "python/Graphs/maze_solver.py",
-                "aRef": ""
+                "file": "Obsidian/Design/Sustainability/SUSTAINABILITY.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: maze_solver.py"
+              "icon": "lucide-file",
+              "title": "SUSTAINABILITY"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "55198e5ba50e8095",
   "lastOpenFiles": [
-    "Obsidian/Design/Sustainability/SUSTAINABILITY.md",
     "Obsidian/Design/Sustainability/Lifecycle of a product.md",
+    "Obsidian/Design/Sustainability/SUSTAINABILITY.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
