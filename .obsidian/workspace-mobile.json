@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "853b218f7b35695d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f24fc3c0c402714e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2444ae52b1a18509",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d047d1721ca77f89",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "845c412ce5d01dd8",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "19d1487e0c2c2239",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "55b2ef30ec47d3e1",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "a8d8277beb4a852e",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "All properties"
+        }
+      },
+      {
+        "id": "8e7a682763943138",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "11acfc193964d760",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "f543dc3983fd5f88",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "e76a9524aa2aa11b",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "64a79da541058463",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "2444ae52b1a18509",
+  "lastOpenFiles": [
+    "full.png",
+    "catapult flow.md",
+    "Pasted image 20260706200404.png",
+    "Mermiad.md",
+    "Paper1_ASLv1_Python3_Code/Paper1_ASLv1_Python3_Code.py",
+    "Paper1_ASLv1_Python3_Code/TestCase.txt",
+    "Paper1_ASLv1_Python3_Code",
+    "Untitled.canvas",
+    "Untitled 2.canvas",
+    "input.jpg",
+    "input.png",
+    "main2.spec",
+    "Obsidian/Design/Materials/Metals/Metal forming processes.md",
+    "Obsidian/Design/Materials/Metals/Metal finishes.md",
+    "Obsidian/Design/Materials/Metals/Metals.md",
+    "Obsidian/Design/Materials/Polymers/Polymer Enhancement.md",
+    "Obsidian/Design/Materials/Polymers/Polymer Finishes.md",
+    "Obsidian/Design/Materials/Polymers/Polymer Forming Processes.md",
+    "Obsidian/Design/Materials/Polymers/Polymer Joining.md",
+    "Obsidian/Design/Materials/Polymers/Polymers.md",
+    "Obsidian/Design/Materials/Smart materials.md",
+    "Obsidian/Design/Materials/Metals",
+    "Obsidian/Design/Materials/Composite Materials.md",
+    "Obsidian/Design/Materials/Polymers",
+    "Obsidian/Design/Materials/Plywood.md",
+    "Obsidian/Design/Materials/MATERIALS.md",
+    "Obsidian/Design/Designers/Marianne Brandt.md",
+    "Obsidian/Design/Designers/Margaret Calvert.md",
+    "Obsidian/Design/Designers/James Dyson.md",
+    "Obsidian/Design/Designers/Charles & Ray Eames.md",
+    "Obsidian/Design/Designers/THE DESIGNERS.md",
+    "Obsidian/Design/Designers/Philippe starck.md",
+    "Obsidian/Design/Designers/Dieter Rams.md",
+    "Obsidian/Design/Genius of Design/GENIUS OF DESIGN.md",
+    "Obsidian/Design/Genius of Design/Post WW.md",
+    "Obsidian/Design/Genius of Design/Designers.md",
+    "Obsidian/Design/Genius of Design/The artist.md",
+    "Obsidian/CS/Images/Pasted image 20250929145605.png",
+    "Obsidian/Design/Materials",
+    "Obsidian/Design/Designers",
+    "Obsidian/Design/Genius of Design",
+    "Obsidian/Design/Sustainability",
+    "Obsidian/Clippings/Pasted image 20260311125315.png",
+    "Obsidian/Clippings/TopView_crop.png",
+    "Obsidian/Clippings/Pasted image 20260311123506.png",
+    "Obsidian/Clippings/Untitled.png",
+    "Obsidian/Clippings/Pasted image 20260708124955.png",
+    "Obsidian/Clippings/Pasted image 20260708124811.png",
+    "Untitled 1.canvas"
+  ]
+}
