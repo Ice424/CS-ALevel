@@ -11,10 +11,14 @@
             "id": "2444ae52b1a18509",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian/CS/Catapult Project.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Catapult Project"
             }
           }
         ]
@@ -113,6 +117,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Obsidian/CS/Catapult Project.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -163,11 +168,20 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
   "active": "2444ae52b1a18509",
   "lastOpenFiles": [
+    "python/Chess/sprites/BB.png",
+    "input.jpg",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "output0.png",
     "full.png",
     "catapult flow.md",
     "Pasted image 20260706200404.png",
@@ -175,9 +189,6 @@
     "Paper1_ASLv1_Python3_Code/Paper1_ASLv1_Python3_Code.py",
     "Paper1_ASLv1_Python3_Code/TestCase.txt",
     "Paper1_ASLv1_Python3_Code",
-    "Untitled.canvas",
-    "Untitled 2.canvas",
-    "input.jpg",
     "input.png",
     "main2.spec",
     "Obsidian/Design/Materials/Metals/Metal forming processes.md",
@@ -213,9 +224,6 @@
     "Obsidian/Clippings/Pasted image 20260311125315.png",
     "Obsidian/Clippings/TopView_crop.png",
     "Obsidian/Clippings/Pasted image 20260311123506.png",
-    "Obsidian/Clippings/Untitled.png",
-    "Obsidian/Clippings/Pasted image 20260708124955.png",
-    "Obsidian/Clippings/Pasted image 20260708124811.png",
-    "Untitled 1.canvas"
+    "Obsidian/Clippings/Untitled.png"
   ]
 }
