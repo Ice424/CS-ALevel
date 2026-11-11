@@ -1,0 +1,37 @@
+{
+    "0": {
+        "name": "Year 13: 13 Burgess 1",
+        "start_time": "08:50",
+        "end_time": "09:00",
+        "room": "A2",
+        "url": "/students/academic-unit-ui/overview/id/18984"
+    },
+    "3": {
+        "name": "Design: Year 13: 13E/De",
+        "start_time": "11:20",
+        "end_time": "12:20",
+        "room": "D6",
+        "url": "/students/academic-unit-ui/overview/id/18924"
+    },
+    "4": {
+        "name": "Mathematics: Year 13: 13B/Ma",
+        "start_time": "12:20",
+        "end_time": "13:20",
+        "room": "B10",
+        "url": "/students/academic-unit-ui/overview/id/18873"
+    },
+    "5": {
+        "name": "Year 13: 13 Burgess 1",
+        "start_time": "13:20",
+        "end_time": "13:45",
+        "room": "A2",
+        "url": "/students/academic-unit-ui/overview/id/18984"
+    },
+    "7": {
+        "name": "Computer Sci: Year 13: 13A/Cs",
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "room": "AD14",
+        "url": "/students/academic-unit-ui/overview/id/18866"
+    }
+}

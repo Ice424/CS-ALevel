@@ -1,0 +1,174 @@
+{
+    "type": "page",
+    "content": [
+        {
+            "componentName": "Arbor.container.WidgetZoneColumn",
+            "type": "component",
+            "content": [
+                {
+                    "componentName": "Arbor.container.InfoPanel",
+                    "props": {
+                        "id": "Component_d1ab3f4612c5dd8d0bfeebd103d1af7d",
+                        "title": "Elliot <b>Dunn</b><span class="mis-icon mis-icon-male"></span>",
+                        "header": {
+                            "hidden": False
+                        },
+                        "properties": [
+                            {
+                                "label": "Form",
+                                "value": "13 B1"
+                            }
+                        ],
+                        "picture": "https://simon-langton-grammar-school-for-boys.uk.arbor.sc/content/view/id/1980404/auth/63a7f63f-1794435055/v/1757065596.0363/width/200/circle/1",
+                        "url": "/students/my-mis-ui/my-account"
+                    },
+                    "xtype": "mis-info-panel"
+                },
+                {
+                    "componentName": "Arbor.container.EventBox",
+                    "type": "component",
+                    "content": [
+                        {
+                            "componentName": "Arbor.container.EventBoxSection",
+                            "type": "content",
+                            "content": "<div>14:45 - 15:45</div><div>Wed,\xa011\xa0Nov\xa02026</div><div><b>Computer Sci: Year 13: 13A/Cs</b> &gt;</div><div>Room: AD14</div><div>Dr Grant</div>",
+                            "xtype": "mis-event-box-section",
+                            "props": {
+                                "title": "Previous lesson"
+                            }
+                        },
+                        {
+                            "componentName": "Arbor.container.EventBoxSection",
+                            "type": "content",
+                            "content": "<div>08:50 - 09:00</div><div>Thu,\xa012\xa0Nov\xa02026</div><div><b>Year 13: 13 Burgess 1</b> &gt;</div><div>Room: A2</div><div>Mr Howe</div>",
+                            "xtype": "mis-event-box-section",
+                            "props": {
+                                "title": "Next lesson"
+                            }
+                        }
+                    ],
+                    "xtype": "mis-event-box"
+                },
+                {
+                    "componentName": "Arbor.widget.Calendar",
+                    "props": {
+                        "id": "Component_4e11af4873abd8ad03eb503aa3274b67",
+                        "cls": " mis-clickable",
+                        "title": "My Calendar",
+                        "header": {
+                            "hidden": False
+                        },
+                        "titleUrl": "/students/my-mis-ui/calendar/student-id/5586",
+                        "module": "",
+                        "configs": {
+                            "xxx": {
+                                "yyy": "zzz"
+                            },
+                            "url": "/students/widget-data/get-calendar-data/student-id/5586/"
+                        }
+                    },
+                    "xtype": "mis-widget-calendar"
+                }
+            ],
+            "xtype": "container"
+        },
+        {
+            "componentName": "Arbor.container.Column",
+            "type": "component",
+            "content": [
+                {
+                    "componentName": "Arbor.container.KpiPanel",
+                    "props": {
+                        "id": "Component_2ce46f24460339a570dfda27ac4f6690",
+                        "itemId": "kpis",
+                        "title": "Statistics",
+                        "header": {
+                            "hidden": False
+                        },
+                        "url": "/students/student/kpis/id/5586/",
+                        "kpiCount": None
+                    },
+                    "xtype": "mis-kpi-panel"
+                },
+                {
+                    "props": {
+                        "hiddenRowsCount": 0,
+                        "id": "Component_1d43dcd2ca503bb2434f46b4c1aa012b",
+                        "title": "Assignments that are due",
+                        "header": {
+                            "hidden": False
+                        },
+                        "emptyText": "No assignments"
+                    },
+                    "componentName": "Arbor.container.Section",
+                    "type": "component",
+                    "content": [
+                        {
+                            "componentName": "Arbor.container.PropertyRow",
+                            "props": {
+                                "url": "/students/home-ui/assignments",
+                                "value": "<div><p>View all assignments</p></div>"
+                            },
+                            "xtype": "mis-property-row"
+                        }
+                    ],
+                    "xtype": "mis-section"
+                },
+                {
+                    "props": {
+                        "hiddenRowsCount": 0,
+                        "id": "Component_0167f9e68fcca3bba36cb847cbf8f357",
+                        "title": "My Courses",
+                        "header": {
+                            "hidden": False
+                        }
+                    },
+                    "componentName": "Arbor.container.Section",
+                    "type": "component",
+                    "content": [
+                        {
+                            "componentName": "Arbor.container.PropertyRow",
+                            "props": {
+                                "url": "/students/academic-unit-ui/overview/id/18866",
+                                "value": "<div>Computer Sci: Year 13: 13A/Cs</div>"
+                            },
+                            "xtype": "mis-property-row"
+                        },
+                        {
+                            "componentName": "Arbor.container.PropertyRow",
+                            "props": {
+                                "url": "/students/academic-unit-ui/overview/id/18873",
+                                "value": "<div>Mathematics: Year 13: 13B/Ma</div>"
+                            },
+                            "xtype": "mis-property-row"
+                        },
+                        {
+                            "componentName": "Arbor.container.PropertyRow",
+                            "props": {
+                                "url": "/students/academic-unit-ui/overview/id/18924",
+                                "value": "<div>Design: Year 13: 13E/De</div>"
+                            },
+                            "xtype": "mis-property-row"
+                        },
+                        {
+                            "componentName": "Arbor.container.PropertyRow",
+                            "props": {
+                                "url": "/students/academic-unit-ui/overview/id/18984",
+                                "value": "<div>Year 13: 13 Burgess 1</div>"
+                            },
+                            "xtype": "mis-property-row"
+                        }
+                    ],
+                    "xtype": "mis-section"
+                }
+            ],
+            "xtype": "mis-layoutcolumn",
+            "props": {
+                "disableExtLayout": False,
+                "formActions": []
+            }
+        }
+    ],
+    "helpCentreUrl": "https://support.arbor-education.com/hc/en-us/sections/201564961-Student-Portal-and-Assignments",
+    "navigation": None
+}
