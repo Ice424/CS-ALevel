@@ -1,4 +1,4 @@
-# CHIN
+
 ## R's
 
 Rethink - It rethinks the flooring underneath our feet and reimagines how we expend our energy
@@ -23,7 +23,7 @@ Produces energy through these footsteps from a small flywheel which when the pla
 
 ![[IMG.png]]
 
-# E.Dunn
+
 ## Practicality
 The Pavegen only creates 4 joules per step which is enough to light a led streetlamp for 30 seconds. However, it is not enough to be put on a larger grid or integrated into a wider circuit. it also does not produce an AC current. it would only be viable to contribute to the national grid if installed in large quantities across the country due to the minimal amount of burst energy produced.
 

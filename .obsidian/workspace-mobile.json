@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian/CS/Commniactions/Communication Problem Set.md",
+                "file": "Obsidian/Design/Sustainability/Sustainability Product Study.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Communication Problem Set"
+              "title": "Sustainability Product Study"
             }
           }
         ]
@@ -173,8 +173,21 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "2444ae52b1a18509",
+  "active": "845c412ce5d01dd8",
   "lastOpenFiles": [
+    "Obsidian/CS/Commniactions/Communication Problem Set.md",
+    "python/Sorting Algorithms/Merge sort recursive.py",
+    "Obsidian/Design/Sustainability/Sustainability Product Study.md",
+    "python/Sorting Algorithms/Bubble Sort.py",
+    "Obsidian/Clippings/IMG.png",
+    "python/Sorting Algorithms/V2.0 4.3.5 Sorting Algorithms.pptx",
+    "python/Clasification of algorithms/Classification of algorithms Problem Set.docx",
+    "python/Searching Algorithms/ACTUAL ANSWER SHEET -  4.3.4 Searching  Algorithms.docx",
+    "python/Searching Algorithms/Exercise 1.py",
+    "python/Searching Algorithms/temp.py",
+    "python/Searching Algorithms/4.3.4SearchingAlgorithmsProblemSet.pdf",
+    "python/Searching Algorithms/V2.0 4.3.4 Searching algorithms.pptx",
+    "python/Searching Algorithms/Binary tree.py",
     "Obsidian/CS/Catapult Project.md",
     "Obsidian/CS/Classification of algorithms.md",
     "python/Chess/sprites/BB.png",
@@ -187,11 +200,7 @@
     "catapult flow.md",
     "Pasted image 20260706200404.png",
     "Mermiad.md",
-    "Paper1_ASLv1_Python3_Code/Paper1_ASLv1_Python3_Code.py",
-    "Paper1_ASLv1_Python3_Code/TestCase.txt",
-    "Paper1_ASLv1_Python3_Code",
     "input.png",
-    "main2.spec",
     "Obsidian/Design/Materials/Metals/Metal forming processes.md",
     "Obsidian/Design/Materials/Metals/Metal finishes.md",
     "Obsidian/Design/Materials/Metals/Metals.md",
@@ -201,9 +210,7 @@
     "Obsidian/Design/Materials/Polymers/Polymer Joining.md",
     "Obsidian/Design/Materials/Polymers/Polymers.md",
     "Obsidian/Design/Materials/Smart materials.md",
-    "Obsidian/Design/Materials/Metals",
     "Obsidian/Design/Materials/Composite Materials.md",
-    "Obsidian/Design/Materials/Polymers",
     "Obsidian/Design/Materials/Plywood.md",
     "Obsidian/Design/Materials/MATERIALS.md",
     "Obsidian/Design/Designers/Marianne Brandt.md",
@@ -214,15 +221,8 @@
     "Obsidian/Design/Designers/Philippe starck.md",
     "Obsidian/Design/Designers/Dieter Rams.md",
     "Obsidian/Design/Genius of Design/GENIUS OF DESIGN.md",
-    "Obsidian/Design/Genius of Design/Post WW.md",
-    "Obsidian/Design/Genius of Design/Designers.md",
     "Obsidian/CS/Images/Pasted image 20250929145605.png",
-    "Obsidian/Design/Materials",
-    "Obsidian/Design/Designers",
-    "Obsidian/Design/Genius of Design",
-    "Obsidian/Design/Sustainability",
     "Obsidian/Clippings/Pasted image 20260311125315.png",
-    "Obsidian/Clippings/TopView_crop.png",
-    "Obsidian/Clippings/Pasted image 20260311123506.png"
+    "Obsidian/Clippings/TopView_crop.png"
   ]
 }
