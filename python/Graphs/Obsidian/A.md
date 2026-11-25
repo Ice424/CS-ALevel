@@ -1,2 +1,2 @@
 [[B]]
-[[D]]
+[[python/Graphs/Obsidian/D]]

@@ -4,3 +4,4 @@
 *.mp4
 *build*
 *dist*
+*/__pycache__

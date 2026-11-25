@@ -116,7 +116,7 @@ def update_data():
     with open("todays_lessons.json", "w") as f:
         f.write(json.dumps(lessons_json))
 
-def get_next_lesson(period:int | str | None=None):
+def buns_get_next_lesson(period:int | str | None=None):
     try:
         with open("todays_lessons.json", "r") as f:
             lessons: dict[int, dict[str,str]] = json.load(f)
@@ -127,8 +127,8 @@ def get_next_lesson(period:int | str | None=None):
     
     if period is None:
         
-        #now = dt.datetime.now().time()
-        now = dt.time(hour=13)
+        now = dt.datetime.now().time()
+        #now = dt.time(hour=13)
         for lesson, data in lessons.items():
             start_time = data["start_time"].split(":")
             start_time = dt.time(hour=int(start_time[0]), minute=int(start_time[1]))
@@ -174,8 +174,10 @@ def get_next_lesson(period:int | str | None=None):
     
     lesson_html = BeautifulSoup(lesson_raw, 'html.parser')
     date = str(lesson_html.contents[1].string)# pyright: ignore[reportAttributeAccessIssue]
-
-    day = dt.datetime.strptime(date, "%a, %d %b %Y")
+    if date != "Today":
+        day = dt.datetime.strptime(date, "%a, %d %b %Y")
+    else:
+        day = dt.datetime.now()
 
     x: re.Match = re.fullmatch(r"(\d\d:\d\d) - (\d\d:\d\d)", lesson_html.contents[0].string) # pyright: ignore[reportAttributeAccessIssue]
     start_time, end_time= x.groups()
@@ -191,7 +193,15 @@ def get_next_lesson(period:int | str | None=None):
     }
     return lesson
 
-get_next_lesson(7)
+
+def get_next_lesson(period:int | str | None=None):
+    
+
+update_data()
+print(get_next_lesson(2))
+
+
+
 @app.route("/refresh",  methods=["POST"])
 def refresh():
     try:
