@@ -1,0 +1,178 @@
+{
+    "items": [
+        {
+            "fields": {
+                "response": {
+                    "value": {
+                        "currentView": {
+                            "view": "day",
+                            "start": "2026-08-25",
+                            "end": "2026-08-25"
+                        },
+                        "pages": [
+                            {
+                                "start": "2026-08-22",
+                                "end": "2026-08-22",
+                                "title": "<b>Saturday 22<\/b> August 2026"
+                            },
+                            {
+                                "start": "2026-08-23",
+                                "end": "2026-08-23",
+                                "title": "<b>Sunday 23<\/b> August 2026",
+                                "html": "<div style=\"position:relative\">\n    <table class=\"mis-cal mis-cal-day\">\n        <tbody>\n        <tr>\n            <td style=\"width:100px;height:0;padding:0\"><\/td>\n            <td style=\"height:0;padding:0\">\n                            <\/td>\n        <\/tr>\n         <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 08:00:00\" > 08:00<\/td ><td data-datetime = \"2026-08-23 08:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 09:00:00\" > 09:00<\/td ><td data-datetime = \"2026-08-23 09:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 10:00:00\" > 10:00<\/td ><td data-datetime = \"2026-08-23 10:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 11:00:00\" > 11:00<\/td ><td data-datetime = \"2026-08-23 11:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 12:00:00\" > 12:00<\/td ><td data-datetime = \"2026-08-23 12:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 13:00:00\" > 13:00<\/td ><td data-datetime = \"2026-08-23 13:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 14:00:00\" > 14:00<\/td ><td data-datetime = \"2026-08-23 14:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 15:00:00\" > 15:00<\/td ><td data-datetime = \"2026-08-23 15:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-23 16:00:00\" > 16:00<\/td ><td data-datetime = \"2026-08-23 16:00:00\" ><\/td ><\/tr>         <\/tbody>\n    <\/table>\n<\/div>"
+                            },
+                            {
+                                "start": "2026-08-24",
+                                "end": "2026-08-24",
+                                "title": "<b>Monday 24<\/b> August 2026",
+                                "html": "<div style=\"position:relative\">\n    <table class=\"mis-cal mis-cal-day\">\n        <tbody>\n        <tr>\n            <td style=\"width:100px;height:0;padding:0\"><\/td>\n            <td style=\"height:0;padding:0\">\n                            <\/td>\n        <\/tr>\n         <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 08:00:00\" > 08:00<\/td ><td data-datetime = \"2026-08-24 08:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 09:00:00\" > 09:00<\/td ><td data-datetime = \"2026-08-24 09:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 10:00:00\" > 10:00<\/td ><td data-datetime = \"2026-08-24 10:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 11:00:00\" > 11:00<\/td ><td data-datetime = \"2026-08-24 11:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 12:00:00\" > 12:00<\/td ><td data-datetime = \"2026-08-24 12:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 13:00:00\" > 13:00<\/td ><td data-datetime = \"2026-08-24 13:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 14:00:00\" > 14:00<\/td ><td data-datetime = \"2026-08-24 14:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 15:00:00\" > 15:00<\/td ><td data-datetime = \"2026-08-24 15:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-24 16:00:00\" > 16:00<\/td ><td data-datetime = \"2026-08-24 16:00:00\" ><\/td ><\/tr>         <\/tbody>\n    <\/table>\n<\/div>"
+                            },
+                            {
+                                "start": "2026-08-25",
+                                "end": "2026-08-25",
+                                "title": "<b>Tuesday 25<\/b> August 2026",
+                                "html": "<div style=\"position:relative\">\n    <table class=\"mis-cal mis-cal-day\">\n        <tbody>\n        <tr>\n            <td style=\"width:100px;height:0;padding:0\"><\/td>\n            <td style=\"height:0;padding:0\">\n                            <\/td>\n        <\/tr>\n         <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 08:00:00\" > 08:00<\/td ><td data-datetime = \"2026-08-25 08:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 09:00:00\" > 09:00<\/td ><td data-datetime = \"2026-08-25 09:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 10:00:00\" > 10:00<\/td ><td data-datetime = \"2026-08-25 10:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 11:00:00\" > 11:00<\/td ><td data-datetime = \"2026-08-25 11:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 12:00:00\" > 12:00<\/td ><td data-datetime = \"2026-08-25 12:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 13:00:00\" > 13:00<\/td ><td data-datetime = \"2026-08-25 13:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 14:00:00\" > 14:00<\/td ><td data-datetime = \"2026-08-25 14:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 15:00:00\" > 15:00<\/td ><td data-datetime = \"2026-08-25 15:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-25 16:00:00\" > 16:00<\/td ><td data-datetime = \"2026-08-25 16:00:00\" ><\/td ><\/tr>         <\/tbody>\n    <\/table>\n<\/div>"
+                            },
+                            {
+                                "start": "2026-08-26",
+                                "end": "2026-08-26",
+                                "title": "<b>Wednesday 26<\/b> August 2026",
+                                "html": "<div style=\"position:relative\">\n    <table class=\"mis-cal mis-cal-day\">\n        <tbody>\n        <tr>\n            <td style=\"width:100px;height:0;padding:0\"><\/td>\n            <td style=\"height:0;padding:0\">\n                            <\/td>\n        <\/tr>\n         <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 08:00:00\" > 08:00<\/td ><td data-datetime = \"2026-08-26 08:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 09:00:00\" > 09:00<\/td ><td data-datetime = \"2026-08-26 09:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 10:00:00\" > 10:00<\/td ><td data-datetime = \"2026-08-26 10:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 11:00:00\" > 11:00<\/td ><td data-datetime = \"2026-08-26 11:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 12:00:00\" > 12:00<\/td ><td data-datetime = \"2026-08-26 12:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 13:00:00\" > 13:00<\/td ><td data-datetime = \"2026-08-26 13:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 14:00:00\" > 14:00<\/td ><td data-datetime = \"2026-08-26 14:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 15:00:00\" > 15:00<\/td ><td data-datetime = \"2026-08-26 15:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-26 16:00:00\" > 16:00<\/td ><td data-datetime = \"2026-08-26 16:00:00\" ><\/td ><\/tr>         <\/tbody>\n    <\/table>\n<\/div>"
+                            },
+                            {
+                                "start": "2026-08-27",
+                                "end": "2026-08-27",
+                                "title": "<b>Thursday 27<\/b> August 2026",
+                                "html": "<div style=\"position:relative\">\n    <table class=\"mis-cal mis-cal-day\">\n        <tbody>\n        <tr>\n            <td style=\"width:100px;height:0;padding:0\"><\/td>\n            <td style=\"height:0;padding:0\">\n                            <\/td>\n        <\/tr>\n         <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 08:00:00\" > 08:00<\/td ><td data-datetime = \"2026-08-27 08:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 09:00:00\" > 09:00<\/td ><td data-datetime = \"2026-08-27 09:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 10:00:00\" > 10:00<\/td ><td data-datetime = \"2026-08-27 10:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 11:00:00\" > 11:00<\/td ><td data-datetime = \"2026-08-27 11:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 12:00:00\" > 12:00<\/td ><td data-datetime = \"2026-08-27 12:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 13:00:00\" > 13:00<\/td ><td data-datetime = \"2026-08-27 13:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 14:00:00\" > 14:00<\/td ><td data-datetime = \"2026-08-27 14:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 15:00:00\" > 15:00<\/td ><td data-datetime = \"2026-08-27 15:00:00\" ><\/td ><\/tr>  <tr><td style = \"width:100px\" data-datetime = \"2026-08-27 16:00:00\" > 16:00<\/td ><td data-datetime = \"2026-08-27 16:00:00\" ><\/td ><\/tr>         <\/tbody>\n    <\/table>\n<\/div>"
+                            },
+                            {
+                                "start": "2026-08-28",
+                                "end": "2026-08-28",
+                                "title": "<b>Friday 28<\/b> August 2026"
+                            }
+                        ],
+                        "academicYears": [
+                            {
+                                "startDate": "2002-09-01",
+                                "endDate": "2003-08-31"
+                            },
+                            {
+                                "startDate": "2003-09-01",
+                                "endDate": "2004-08-31"
+                            },
+                            {
+                                "startDate": "2004-09-01",
+                                "endDate": "2005-08-31"
+                            },
+                            {
+                                "startDate": "2005-09-01",
+                                "endDate": "2006-09-03"
+                            },
+                            {
+                                "startDate": "2006-09-04",
+                                "endDate": "2007-09-02"
+                            },
+                            {
+                                "startDate": "2007-09-03",
+                                "endDate": "2008-08-31"
+                            },
+                            {
+                                "startDate": "2008-09-01",
+                                "endDate": "2009-09-02"
+                            },
+                            {
+                                "startDate": "2009-09-03",
+                                "endDate": "2010-08-31"
+                            },
+                            {
+                                "startDate": "2010-09-01",
+                                "endDate": "2011-08-31"
+                            },
+                            {
+                                "startDate": "2011-09-01",
+                                "endDate": "2012-09-03"
+                            },
+                            {
+                                "startDate": "2012-09-04",
+                                "endDate": "2013-09-02"
+                            },
+                            {
+                                "startDate": "2013-09-03",
+                                "endDate": "2014-09-01"
+                            },
+                            {
+                                "startDate": "2014-09-02",
+                                "endDate": "2015-09-02"
+                            },
+                            {
+                                "startDate": "2015-09-03",
+                                "endDate": "2016-09-04"
+                            },
+                            {
+                                "startDate": "2016-09-05",
+                                "endDate": "2017-09-03"
+                            },
+                            {
+                                "startDate": "2017-09-04",
+                                "endDate": "2018-09-02"
+                            },
+                            {
+                                "startDate": "2018-09-03",
+                                "endDate": "2019-09-01"
+                            },
+                            {
+                                "startDate": "2019-09-02",
+                                "endDate": "2020-08-31"
+                            },
+                            {
+                                "startDate": "2020-09-01",
+                                "endDate": "2021-08-31"
+                            },
+                            {
+                                "startDate": "2021-09-01",
+                                "endDate": "2022-08-31"
+                            },
+                            {
+                                "startDate": "2022-09-01",
+                                "endDate": "2023-08-31"
+                            },
+                            {
+                                "startDate": "2023-09-01",
+                                "endDate": "2024-08-31"
+                            },
+                            {
+                                "startDate": "2024-09-01",
+                                "endDate": "2025-08-31"
+                            },
+                            {
+                                "startDate": "2025-09-01",
+                                "endDate": "2026-08-31"
+                            },
+                            {
+                                "startDate": "2026-09-01",
+                                "endDate": "2027-08-31"
+                            }
+                        ],
+                        "viewDefaults": {
+                            "period": {
+                                "start": "2026-08-01",
+                                "end": "2026-08-31"
+                            },
+                            "multiday": {
+                                "start": "2026-08-24",
+                                "end": "2026-08-28"
+                            },
+                            "day": {
+                                "start": "2026-08-25",
+                                "end": "2026-08-25"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "success": true,
+    "action_params": [],
+    "notifications": []
+}
